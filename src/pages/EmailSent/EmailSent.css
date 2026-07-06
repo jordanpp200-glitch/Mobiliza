@@ -1,0 +1,83 @@
+.email-page{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#07141D;
+
+}
+
+.email-card{
+
+    width:500px;
+
+    background:#10232E;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.email-icon{
+
+    font-size:70px;
+
+}
+
+.email-card h1{
+
+    color:white;
+
+    margin-top:20px;
+
+}
+
+.email-card p{
+
+    color:#c6d0d5;
+
+    line-height:30px;
+
+}
+
+.email-card strong{
+
+    color:#25D8C5;
+
+    display:block;
+
+    margin:25px 0;
+
+}
+
+.email-card button{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}

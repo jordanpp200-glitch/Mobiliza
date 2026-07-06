@@ -1,0 +1,49 @@
+.trips-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#08141d;
+
+}
+
+.trips-content{
+
+    flex:1;
+
+}
+
+.trips-container{
+
+    padding:35px;
+
+}
+
+.trips-container h1{
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+.trips-container p{
+
+    color:#b9c4cf;
+
+}
+
+.empty-card{
+
+    margin-top:30px;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    background:#122534;
+
+    color:white;
+
+}

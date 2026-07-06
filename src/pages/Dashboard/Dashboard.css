@@ -1,0 +1,899 @@
+/* ==========================================================
+   DASHBOARD - MOBILIZA
+========================================================== */
+
+.dashboard{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#07141D;
+
+    display:flex;
+
+}
+
+/* ==========================================================
+   ÁREA PRINCIPAL
+========================================================== */
+
+.dashboard-content{
+
+    flex:1;
+
+    margin-left:80px;
+
+    padding:24px;
+
+    min-height:100vh;
+
+    transition:.35s;
+
+}
+
+/* Sidebar aberta fica sobreposta */
+.sidebar.open ~ .dashboard-content{
+
+    margin-left:80px;
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.dashboard-container{
+
+    width:100%;
+
+    max-width:1600px;
+
+    margin:0 auto;
+
+}
+
+/* ==========================================================
+   TOPO
+========================================================== */
+
+.dashboard-header{
+
+    margin-bottom:24px;
+
+}
+
+/* ==========================================================
+   GRID PRINCIPAL
+========================================================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(520px,2fr)
+
+        minmax(320px,1fr);
+
+    gap:24px;
+
+    align-items:start;
+
+    margin-bottom:28px;
+
+}
+
+.dashboard-grid>*{
+
+    min-width:0;
+
+}
+
+/* ==========================================================
+   SECTIONS
+========================================================== */
+
+.dashboard-section{
+
+    background:#102633;
+
+    border-radius:24px;
+
+    padding:26px;
+
+    margin-bottom:24px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.20);
+
+}
+
+.dashboard-section:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================================================
+   CABEÇALHO DAS SEÇÕES
+========================================================== */
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.section-header h2{
+
+    color:#FFFFFF;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.btn-link{
+
+    border:none;
+
+    background:none;
+
+    color:#25D8C5;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.btn-link:hover{
+
+    color:#43F2DF;
+
+}
+
+/* ==========================================================
+   RESUMO DA CONTA
+========================================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.stat-card{
+
+    background:#0D1F2B;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.30s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    min-height:150px;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(37,216,197,.15);
+
+    border-color:rgba(37,216,197,.25);
+
+}
+
+.stat-card span{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.stat-card small{
+
+    color:#90A8B5;
+
+    font-size:13px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/* ==========================================================
+   HISTÓRICO
+========================================================== */
+
+.activity-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.activity-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    background:#0D1F2B;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.30s;
+
+}
+
+.activity-item:hover{
+
+    transform:translateY(-2px);
+
+    border-color:rgba(37,216,197,.20);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.20);
+
+}
+
+.activity-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.activity-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:16px;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.activity-left h4{
+
+    color:#FFFFFF;
+
+    font-size:17px;
+
+    margin-bottom:6px;
+
+}
+
+.activity-left p{
+
+    color:#8EA7B3;
+
+    font-size:13px;
+
+}
+
+.income{
+
+    color:#35D07F;
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+.expense{
+
+    color:#FF6464;
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+.activity-empty{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+}
+
+.activity-empty .empty-icon{
+
+    font-size:56px;
+
+    margin-bottom:20px;
+
+}
+
+.activity-empty h3{
+
+    color:#FFFFFF;
+
+    margin-bottom:10px;
+
+}
+
+.activity-empty p{
+
+    color:#90A8B5;
+
+    max-width:420px;
+
+    margin:auto;
+
+    line-height:26px;
+
+}
+
+/* ==========================================================
+   ATALHOS
+========================================================== */
+
+.shortcut-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+
+    gap:20px;
+
+}
+
+.shortcut-grid button{
+
+    background:#0D1F2B;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:22px;
+
+    height:115px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#FFFFFF;
+
+    transition:.30s;
+
+}
+
+.shortcut-grid button:hover{
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(37,216,197,.25);
+
+}
+
+.shortcut-grid button{
+
+    font-size:34px;
+
+}
+
+.shortcut-grid button span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   BANNER
+========================================================== */
+
+.dashboard-banner{
+
+    margin-top:30px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #0B1A24,
+
+        #123042,
+
+        #1A435B
+
+    );
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.banner-content{
+
+    display:grid;
+
+    grid-template-columns:1.4fr 420px;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:45px;
+
+}
+
+.banner-text small{
+
+    color:#6FE7DB;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+}
+
+.banner-text h1{
+
+    margin-top:12px;
+
+    color:#FFFFFF;
+
+    font-size:42px;
+
+    font-weight:800;
+
+}
+
+.banner-text h3{
+
+    margin-top:18px;
+
+    color:#25D8C5;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.banner-text p{
+
+    margin-top:22px;
+
+    max-width:560px;
+
+    color:#C6D5DD;
+
+    line-height:30px;
+
+    font-size:16px;
+
+}
+
+.banner-button{
+
+    margin-top:30px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    padding:16px 28px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.banner-button:hover{
+
+    transform:translateY(-4px);
+
+    background:#42F3DF;
+
+}
+
+.banner-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.banner-image img{
+
+    width:100%;
+
+    max-width:360px;
+
+    border-radius:22px;
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.35);
+
+    transition:.35s;
+
+}
+
+.banner-image img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.dashboard-loading{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    background:#07141D;
+
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width:1600px){
+
+    .dashboard-content{
+
+        padding:22px;
+
+    }
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1400px){
+
+    .dashboard-grid{
+
+        grid-template-columns:
+            minmax(430px,1.8fr)
+            minmax(300px,1fr);
+
+    }
+
+    .banner-content{
+
+        grid-template-columns:1fr 320px;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLETS GRANDES
+========================================================== */
+
+@media (max-width:1200px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .banner-content{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .banner-text{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .banner-image{
+
+        margin-top:20px;
+
+    }
+
+}
+
+/* ==========================================================
+   AQUI ESTÁ A CORREÇÃO DO SEU PROBLEMA
+========================================================== */
+
+@media (max-width:980px){
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .ticket-card{
+
+        max-width:100%;
+
+    }
+
+    .balance-card{
+
+        max-width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES
+========================================================== */
+
+@media (max-width:768px){
+
+    .dashboard-content{
+
+        margin-left:0;
+
+        padding:18px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .shortcut-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .activity-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .activity-left{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:520px){
+
+    .shortcut-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .banner-content{
+
+        padding:28px;
+
+    }
+
+    .banner-text h1{
+
+        font-size:32px;
+
+    }
+
+    .banner-text h3{
+
+        font-size:22px;
+
+    }
+
+    .section-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+}
+
+/* ==========================================================
+   SCROLL
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07141D;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#25D8C5;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#4FF4E5;
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+.dashboard-section,
+
+.dashboard-banner,
+
+.ticket-card,
+
+.balance-card{
+
+    animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

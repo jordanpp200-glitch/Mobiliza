@@ -1,0 +1,59 @@
+.download{
+
+    padding:130px 80px;
+
+    background:linear-gradient(180deg,#0b2430,#07161d);
+
+    text-align:center;
+
+}
+
+.download h2{
+
+    color:white;
+
+    font-size:52px;
+
+}
+
+.download p{
+
+    color:#c4d0d3;
+
+    margin:30px auto;
+
+    width:700px;
+
+    line-height:35px;
+
+}
+
+.download-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+.download-buttons button{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#20d6c5;
+
+    color:#05161d;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}

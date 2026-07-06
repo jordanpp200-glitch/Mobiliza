@@ -1,0 +1,137 @@
+.download-app{
+
+    padding:120px 80px;
+
+    background:#08151d;
+
+}
+
+.download-content{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1.4fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.download-badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    background:rgba(37,216,197,.15);
+
+    color:#25D8C5;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.download-info h2{
+
+    color:white;
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+}
+
+.download-info p{
+
+    color:#B8C5CC;
+
+    font-size:20px;
+
+    line-height:36px;
+
+    margin-bottom:35px;
+
+}
+
+.download-info ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.download-info li{
+
+    color:#25D8C5;
+
+    margin-bottom:18px;
+
+    font-size:20px;
+
+}
+
+.download-qr{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.qr-card{
+
+    width:360px;
+
+    padding:40px;
+
+    background:#10232E;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    border:1px solid rgba(37,216,197,.15);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+    transition:.35s;
+
+}
+
+.qr-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.qr-card img{
+
+    width:220px;
+
+    margin-bottom:25px;
+
+}
+
+.qr-card h3{
+
+    color:white;
+
+    margin-bottom:12px;
+
+}
+
+.qr-card span{
+
+    color:#25D8C5;
+
+}

@@ -1,0 +1,101 @@
+.floating-buttons{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    z-index:9999;
+
+}
+
+.floating-whatsapp,
+
+.floating-top{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    border:none;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.floating-whatsapp{
+
+    background:#25D366;
+
+    color:white;
+
+    box-shadow:0 15px 35px rgba(37,211,102,.35);
+
+}
+
+.floating-whatsapp:hover{
+
+    transform:translateY(-6px) scale(1.08);
+
+}
+
+.floating-top{
+
+    background:#20d6c5;
+
+    color:#05161d;
+
+    box-shadow:0 15px 35px rgba(32,214,197,.35);
+
+}
+
+.floating-top:hover{
+
+    transform:translateY(-6px);
+
+}
+
+@media(max-width:768px){
+
+.floating-buttons{
+
+right:18px;
+
+bottom:18px;
+
+}
+
+.floating-whatsapp,
+
+.floating-top{
+
+width:55px;
+
+height:55px;
+
+font-size:24px;
+
+}
+
+}

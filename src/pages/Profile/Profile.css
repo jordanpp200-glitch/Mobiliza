@@ -1,0 +1,1202 @@
+/* ==========================================================
+   PROFILE - MOBILIZA
+========================================================== */
+
+.profile-page{
+
+    width:100%;
+
+    max-width:1500px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    padding-bottom:40px;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.profile-header{
+
+    background:#102633;
+
+    border-radius:28px;
+
+    padding:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:35px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.22);
+
+}
+
+/* ==========================================================
+   FOTO
+========================================================== */
+
+.profile-avatar-area{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.profile-avatar{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #25D8C5;
+
+    transition:.35s;
+
+}
+
+.profile-avatar:hover{
+
+    transform:scale(1.05);
+
+}
+
+.profile-avatar-icon{
+
+    font-size:150px;
+
+    color:#25D8C5;
+
+}
+
+/* ==========================================================
+   BOTÃO FOTO
+========================================================== */
+
+.profile-photo-button{
+
+    border:none;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    padding:12px 20px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.30s;
+
+}
+
+.profile-photo-button:hover{
+
+    background:#47F3E3;
+
+}
+
+/* ==========================================================
+   DADOS DO USUÁRIO
+========================================================== */
+
+.profile-user-info{
+
+    flex:1;
+
+}
+
+.profile-user-info h1{
+
+    color:#FFFFFF;
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+}
+
+.profile-user-info p{
+
+    color:#B8CBD5;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:16px;
+
+}
+
+.profile-user-info span{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   BOTÕES HEADER
+========================================================== */
+
+.profile-actions{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.btn-save{
+
+    border:none;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    padding:16px 28px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.30s;
+
+}
+
+.btn-save:hover{
+
+    background:#46F3E2;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.profile-card{
+
+    background:#102633;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.20);
+
+    transition:.30s;
+
+}
+
+.profile-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.28);
+
+}
+
+/* ==========================================================
+   TÍTULO DOS CARDS
+========================================================== */
+
+.profile-card-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:26px;
+
+}
+
+.profile-card-title svg{
+
+    font-size:26px;
+
+    color:#25D8C5;
+
+}
+
+.profile-card-title h2{
+
+    color:#FFFFFF;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   GRID DOS CAMPOS
+========================================================== */
+
+.profile-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+/* ==========================================================
+   CAMPOS
+========================================================== */
+
+.profile-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.profile-field label{
+
+    color:#B7CBD6;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.profile-field input,
+
+.profile-field select{
+
+    width:100%;
+
+    height:54px;
+
+    padding:0 18px;
+
+    background:#0D1F2B;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:16px;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.30s;
+
+}
+
+.profile-field input::placeholder{
+
+    color:#7E97A6;
+
+}
+
+.profile-field input:hover,
+
+.profile-field select:hover{
+
+    border-color:#25D8C5;
+
+}
+
+.profile-field input:focus,
+
+.profile-field select:focus{
+
+    border-color:#25D8C5;
+
+    box-shadow:
+        0 0 18px rgba(37,216,197,.18);
+
+}
+
+/* ==========================================================
+   INPUT SOMENTE LEITURA
+========================================================== */
+
+.profile-field input[readonly]{
+
+    background:#122B3A;
+
+    color:#D7E7EF;
+
+    cursor:default;
+
+}
+
+/* ==========================================================
+   TEXTO VAZIO
+========================================================== */
+
+.profile-empty{
+
+    color:#A9BDC8;
+
+    font-size:15px;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    background:#0D1F2B;
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   CARTÕES CADASTRADOS
+========================================================== */
+
+.cards-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.saved-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:#0D1F2B;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.30s;
+
+}
+
+.saved-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#25D8C5;
+
+    box-shadow:
+        0 15px 30px rgba(37,216,197,.15);
+
+}
+
+.saved-card strong{
+
+    color:#FFFFFF;
+
+    font-size:18px;
+
+    display:block;
+
+    margin-bottom:6px;
+
+}
+
+.saved-card p{
+
+    color:#9CB4C1;
+
+    font-size:14px;
+
+}
+
+/* ==========================================================
+   BOTÃO REMOVER
+========================================================== */
+
+.remove-card{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#EF4444;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.30s;
+
+}
+
+.remove-card:hover{
+
+    background:#DC2626;
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   BOTÃO ADICIONAR CARTÃO
+========================================================== */
+
+.add-card{
+
+    width:100%;
+
+    margin-top:24px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.add-card:hover{
+
+    background:#48F4E2;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+   SEGURANÇA
+========================================================== */
+
+.security-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.security-actions button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#0D1F2B;
+
+    color:#FFFFFF;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    padding:0 22px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.security-actions button:hover{
+
+    background:#173548;
+
+    border:1px solid #25D8C5;
+
+}
+
+/* ==========================================================
+   PREFERÊNCIAS
+========================================================== */
+
+.profile-field select{
+
+    cursor:pointer;
+
+}
+
+/* ==========================================================
+   BOTÕES FINAIS
+========================================================== */
+
+.profile-actions-bottom{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:20px;
+
+    margin-top:10px;
+
+}
+
+.profile-save{
+
+    min-width:220px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.30s;
+
+}
+
+.profile-save:hover{
+
+    background:#4AF4E4;
+
+    transform:translateY(-2px);
+
+}
+
+.profile-delete{
+
+    min-width:220px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#DC2626;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.30s;
+
+}
+
+.profile-delete:hover{
+
+    background:#B91C1C;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width:1400px){
+
+    .profile-page{
+
+        max-width:100%;
+
+    }
+
+}
+
+@media (max-width:1200px){
+
+    .profile-header{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .profile-user-info{
+
+        width:100%;
+
+    }
+
+    .profile-actions{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .profile-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .profile-actions-bottom{
+
+        flex-direction:column;
+
+    }
+
+    .profile-save,
+
+    .profile-delete{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .profile-page{
+
+        gap:20px;
+
+    }
+
+    .profile-header{
+
+        padding:25px;
+
+    }
+
+    .profile-card{
+
+        padding:22px;
+
+    }
+
+    .profile-avatar{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .profile-avatar-icon{
+
+        font-size:120px;
+
+    }
+
+    .profile-user-info h1{
+
+        font-size:28px;
+
+    }
+
+    .profile-card-title h2{
+
+        font-size:20px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .profile-header{
+
+        border-radius:20px;
+
+    }
+
+    .profile-card{
+
+        border-radius:20px;
+
+    }
+
+    .saved-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:16px;
+
+    }
+
+    .remove-card{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+.profile-header,
+
+.profile-card{
+
+    animation:fadeProfile .45s ease;
+
+}
+
+@keyframes fadeProfile{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   HOVER DOS INPUTS
+========================================================== */
+
+.profile-field input,
+
+.profile-field select{
+
+    transition:
+
+        border-color .25s,
+
+        box-shadow .25s,
+
+        transform .20s;
+
+}
+
+.profile-field input:focus,
+
+.profile-field select:focus{
+
+    transform:translateY(-1px);
+
+}
+
+/* ==========================================================
+   SCROLL
+========================================================== */
+
+.profile-page::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.profile-page::-webkit-scrollbar-thumb{
+
+    background:#25D8C5;
+
+    border-radius:20px;
+
+}
+
+.profile-page::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ==========================================================
+   DETALHES PREMIUM
+========================================================== */
+
+.profile-card,
+.profile-header{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.profile-card::before,
+.profile-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.03),
+
+        transparent
+
+    );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   HOVER DOS CARDS
+========================================================== */
+
+.profile-card{
+
+    transition:
+
+        transform .30s,
+
+        box-shadow .30s,
+
+        border-color .30s;
+
+}
+
+.profile-card:hover{
+
+    border-color:rgba(37,216,197,.20);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.30);
+
+}
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.profile-photo-button,
+.btn-save,
+.profile-save,
+.profile-delete,
+.add-card{
+
+    transition:
+
+        background .30s,
+
+        transform .25s,
+
+        box-shadow .30s;
+
+}
+
+.profile-photo-button:hover,
+.btn-save:hover,
+.profile-save:hover,
+.add-card:hover{
+
+    box-shadow:
+
+        0 12px 30px rgba(37,216,197,.30);
+
+}
+
+.profile-delete:hover{
+
+    box-shadow:
+
+        0 12px 30px rgba(220,38,38,.30);
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.profile-field input,
+.profile-field select{
+
+    transition:
+
+        all .25s ease;
+
+}
+
+.profile-field input:hover,
+.profile-field select:hover{
+
+    background:#102A39;
+
+}
+
+.profile-field input:focus,
+.profile-field select:focus{
+
+    background:#112E3E;
+
+}
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
+.profile-card-title{
+
+    padding-bottom:18px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.profile-card-title svg{
+
+    color:#25D8C5;
+
+}
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.profile-user-info span{
+
+    box-shadow:
+
+        0 10px 25px rgba(37,216,197,.20);
+
+}
+
+/* ==========================================================
+   AVATAR
+========================================================== */
+
+.profile-avatar{
+
+    box-shadow:
+
+        0 20px 40px rgba(37,216,197,.18);
+
+}
+
+.profile-avatar:hover{
+
+    box-shadow:
+
+        0 30px 60px rgba(37,216,197,.30);
+
+}
+
+/* ==========================================================
+   CARTÕES
+========================================================== */
+
+.saved-card{
+
+    position:relative;
+
+}
+
+.saved-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#25D8C5;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.profile-loading{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#07141D;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   ESPAÇAMENTO FINAL
+========================================================== */
+
+.profile-card:last-child{
+
+    margin-bottom:0;
+
+}
+
+.profile-page{
+
+    padding-bottom:60px;
+
+}

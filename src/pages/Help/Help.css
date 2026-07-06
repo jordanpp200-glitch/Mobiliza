@@ -1,0 +1,55 @@
+.help-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#08141d;
+
+}
+
+.help-content{
+
+    flex:1;
+
+}
+
+.help-container{
+
+    padding:35px;
+
+}
+
+.help-container h1{
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.help-card{
+
+    background:#122534;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+}
+
+.help-card ul{
+
+    margin-left:20px;
+
+}
+
+.help-card li{
+
+    margin:10px 0;
+
+}

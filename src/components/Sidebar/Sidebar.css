@@ -1,0 +1,379 @@
+/* ==========================================================
+   SIDEBAR - MOBILIZA
+========================================================== */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 80px;
+
+    height: 100vh;
+
+    background: #07141D;
+
+    border-right: 1px solid rgba(255, 255, 255, .05);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    z-index: 2000;
+
+    transition: .35s ease;
+    overflow-y: auto;
+
+}
+
+.sidebar.open {
+
+    width: 280px;
+
+    box-shadow:
+        18px 0 45px rgba(0, 0, 0, .35);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.sidebar-header {
+
+    padding: 22px 18px;
+
+}
+
+.sidebar-toggle {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #102633;
+
+    color: #25D8C5;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition: .25s;
+
+}
+
+.sidebar-toggle:hover {
+
+    background: #25D8C5;
+
+    color: #07141D;
+
+}
+
+.sidebar-logo {
+
+    margin-top: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.logo-circle {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 16px;
+
+    background: #25D8C5;
+
+    color: #07141D;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+
+}
+
+.sidebar-logo h2 {
+
+    color: white;
+
+    font-size: 24px;
+
+    margin: 0;
+
+}
+
+.sidebar-logo small {
+
+    color: #9EB4C1;
+
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.sidebar-menu {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+}
+
+.sidebar-menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    height: 56px;
+
+    padding: 0 16px;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    color: #B8CBD5;
+
+    transition: .30s;
+
+}
+
+.sidebar-menu a span {
+
+    width: 28px;
+
+    display: flex;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+
+}
+
+.sidebar-menu a p {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+.sidebar-menu a:hover {
+
+    background: #102633;
+
+    color: white;
+
+}
+
+.sidebar-menu .active {
+
+    background: #25D8C5;
+
+    color: #07141D;
+
+    font-weight: 700;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.sidebar-footer {
+
+    padding: 18px 14px 22px;
+
+}
+
+.sidebar-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+.avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #25D8C5;
+
+    color: #07141D;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+
+}
+
+.sidebar-user strong {
+
+    color: white;
+
+    display: block;
+
+}
+
+.sidebar-user small {
+
+    color: #9EB4C1;
+
+}
+
+/* ==========================================================
+   LOGOUT
+========================================================== */
+
+.logout {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #EF4444;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: .25s;
+
+}
+
+.logout:hover {
+
+    background: #DC2626;
+
+}
+
+/* ==========================================================
+   SIDEBAR FECHADA
+========================================================== */
+
+.sidebar:not(.open) .sidebar-logo h2,
+.sidebar:not(.open) .sidebar-logo small,
+.sidebar:not(.open) .sidebar-menu p,
+.sidebar:not(.open) .sidebar-user div,
+.sidebar:not(.open) .logout span {
+
+    display: none;
+
+}
+
+.sidebar:not(.open) .sidebar-menu a {
+
+    justify-content: center;
+
+    padding: 0;
+
+}
+
+.sidebar:not(.open) .sidebar-user {
+
+    justify-content: center;
+
+}
+
+.sidebar:not(.open) .logout {
+
+    width: 48px;
+
+    margin: auto;
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media(max-width:768px) {
+
+    .sidebar {
+
+        transform: translateX(-100%);
+
+    }
+
+    .sidebar.open {
+
+        transform: translateX(0);
+
+        width: 280px;
+
+    }
+
+}

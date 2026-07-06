@@ -1,0 +1,736 @@
+/* ======================================================
+   RESET
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+#root{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    overflow-x:hidden;
+
+    overflow-y:auto;
+
+}
+
+/* ======================================================
+   PÁGINA
+====================================================== */
+
+.login-page{
+
+    position:relative;
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    background-image:url("/images/login-banner.png");
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+}
+
+/* ======================================================
+   ESCURECIMENTO DA IMAGEM
+====================================================== */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(4,16,25,.30),
+
+        rgba(4,16,25,.55)
+
+    );
+
+}
+
+/* ======================================================
+   LOGO
+====================================================== */
+
+.brand{
+
+    position:absolute;
+
+    top:80px;
+
+    left:70px;
+
+    z-index:10;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+}
+
+.brand-icon{
+
+    font-size:68px;
+
+    color:#2bd8d5;
+
+}
+
+.brand h1{
+
+    color:white;
+
+    font-size:74px;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+.brand span{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:white;
+
+    font-size:18px;
+
+    letter-spacing:5px;
+
+}
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.login-card{
+
+    position:absolute;
+
+    right:90px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:420px;
+
+    min-height:590px;
+
+    padding:42px;
+
+    border-radius:30px;
+
+    background:rgba(9,22,35,.72);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 35px 70px rgba(0,0,0,.45);
+
+    z-index:20;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ======================================================
+   BRILHO DO CARD
+====================================================== */
+
+.login-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+
+        rgba(255,255,255,.04),
+
+        rgba(255,255,255,.01)
+
+    );
+
+    pointer-events:none;
+
+}
+
+/* ======================================================
+   TÍTULO
+====================================================== */
+
+.login-card h2{
+
+    text-align:center;
+
+    color:#fff;
+
+    font-size:58px;
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    margin-bottom:40px;
+
+}
+
+/* ======================================================
+   FORMULÁRIO
+====================================================== */
+
+.login-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.login-card label{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+/* ======================================================
+   LINHA SENHA
+====================================================== */
+
+.senha-topo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+}
+
+.senha-topo a{
+
+    color:#2bd8d5;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.senha-topo a:hover{
+
+    color:white;
+
+}
+
+/* ======================================================
+   INPUTS
+====================================================== */
+
+.input-box{
+
+    width:100%;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:0 20px;
+
+    margin-bottom:26px;
+
+    border-radius:18px;
+
+    border:1.5px solid #2bd8d5;
+
+    background:rgba(255,255,255,.05);
+
+    transition:.35s;
+
+}
+
+.input-box:hover{
+
+    border-color:#4dffff;
+
+}
+
+.input-box:focus-within{
+
+    border-color:#4dffff;
+
+    box-shadow:
+
+        0 0 25px rgba(43,216,213,.35);
+
+}
+
+.input-box svg{
+
+    color:#2bd8d5;
+
+    font-size:20px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    height:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+.input-box input::placeholder{
+
+    color:#9da6af;
+
+}
+
+/* ======================================================
+   OLHO DA SENHA
+====================================================== */
+
+.eye{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#bdbdbd;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.eye:hover{
+
+    color:white;
+
+}
+
+/* ======================================================
+   LEMBRAR SENHA
+====================================================== */
+
+.remember{
+
+    margin-top:5px;
+
+    margin-bottom:30px;
+
+}
+
+.remember label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    color:white;
+
+}
+
+.remember input{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:#2bd8d5;
+
+}
+
+/* ======================================================
+   BOTÃO
+====================================================== */
+
+.btn-login{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#2fd8d6;
+
+    color:#07141d;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.btn-login:hover{
+
+    background:#4ff4f1;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 15px 30px rgba(47,216,214,.40);
+
+}
+
+.btn-login:disabled{
+
+    opacity:.8;
+
+    cursor:not-allowed;
+
+}
+
+/* ======================================================
+   CADASTRO
+====================================================== */
+
+.register{
+
+    margin-top:32px;
+
+    text-align:center;
+
+    color:#d7d7d7;
+
+    font-size:17px;
+
+}
+
+.register a{
+
+    margin-left:8px;
+
+    color:#2fd8d6;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+.register a:hover{
+
+    color:white;
+
+}
+
+/* ======================================================
+   ACABAMENTO PREMIUM
+====================================================== */
+
+.login-card{
+
+    animation:loginFade .8s ease;
+
+}
+
+@keyframes loginFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-50%) translateX(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(-50%) translateX(0);
+
+    }
+
+}
+
+/* ======================================================
+   CARD MAIS COMPACTO
+====================================================== */
+
+/* Substitui as propriedades do card */
+
+.login-card{
+
+    width:420px;
+
+    min-height:590px;
+
+    padding:35px 38px;
+
+    border-radius:28px;
+
+}
+
+/* ======================================================
+   TÍTULO MENOR
+====================================================== */
+
+.login-card h2{
+
+    font-size:48px;
+
+    margin-bottom:28px;
+
+}
+
+/* ======================================================
+   LABELS
+====================================================== */
+
+.login-card label{
+
+    font-size:16px;
+
+    margin-bottom:8px;
+
+}
+
+/* ======================================================
+   INPUTS MENORES
+====================================================== */
+
+.input-box{
+
+    height:58px;
+
+    margin-bottom:18px;
+
+    border-radius:15px;
+
+}
+
+.input-box input{
+
+    font-size:17px;
+
+}
+
+/* ======================================================
+   LINHA DA SENHA
+====================================================== */
+
+.senha-topo{
+
+    margin-bottom:8px;
+
+}
+
+.senha-topo a{
+
+    font-size:14px;
+
+}
+
+/* ======================================================
+   LEMBRAR SENHA
+====================================================== */
+
+.remember{
+
+    margin-top:0;
+
+    margin-bottom:22px;
+
+}
+
+.remember label{
+
+    font-size:15px;
+
+}
+
+/* ======================================================
+   BOTÃO
+====================================================== */
+
+.btn-login{
+
+    height:56px;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+}
+
+/* ======================================================
+   CADASTRO
+====================================================== */
+
+.register{
+
+    margin-top:22px;
+
+    font-size:15px;
+
+}
+
+/* ======================================================
+   LOGO
+====================================================== */
+
+.brand{
+
+    top:65px;
+
+    left:65px;
+
+}
+
+.brand-icon{
+
+    font-size:62px;
+
+}
+
+.brand h1{
+
+    font-size:66px;
+
+}
+
+.brand span{
+
+    font-size:16px;
+
+}
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media(max-width:1200px){
+
+    .login-card{
+
+        right:60px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .brand{
+
+        display:none;
+
+    }
+
+    .login-card{
+
+        position:relative;
+
+        right:auto;
+
+        top:auto;
+
+        transform:none;
+
+        margin:auto;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .login-card{
+
+        width:92%;
+
+        min-height:auto;
+
+        padding:30px;
+
+    }
+
+    .login-card h2{
+
+        font-size:38px;
+
+    }
+
+}

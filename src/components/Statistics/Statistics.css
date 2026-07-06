@@ -1,0 +1,49 @@
+.statistics{
+
+    background:#07141d;
+
+    padding:120px 80px;
+
+}
+
+.statistics-badge{
+
+    color:#25D8C5;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+}
+
+.statistics h2{
+
+    color:white;
+
+    font-size:52px;
+
+    margin:15px 0;
+
+}
+
+.statistics p{
+
+    color:#b8c2c7;
+
+    margin-bottom:50px;
+
+    font-size:20px;
+
+}
+
+.chart-card{
+
+    background:#0f2430;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}

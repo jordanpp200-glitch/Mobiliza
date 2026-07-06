@@ -1,0 +1,416 @@
+.recharge-page {
+
+    display: flex;
+
+    background: #08141d;
+
+    min-height: 100vh;
+
+}
+
+.recharge-content {
+
+    flex: 1;
+    margin-left: 80px;
+    padding: 24px;
+
+}
+
+.recharge-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.recharge-container h1 {
+
+    color: #fff;
+
+    margin-bottom: 25px;
+
+}
+
+.saldo-card {
+
+    background: #112332;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    color: #ffffff96;
+
+    margin-bottom: 25px;
+
+}
+
+.saldo-card span {
+
+    color: #8da4b4;
+
+}
+
+.saldo-card h2 {
+
+    color: #2ad5cf;
+
+    margin-top: 10px;
+
+    font-size: 36px;
+
+}
+
+.valor-card,
+.metodo-card {
+
+    background: #112332;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    color: white;
+
+}
+
+.quick-values {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin: 20px 0;
+
+}
+
+.quick-values button {
+
+    background: #27d8cf;
+
+    border: none;
+
+    color: #08141d;
+
+    font-weight: bold;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.quick-values button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.valor-card input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    margin-top: 15px;
+
+    background: #1b2d3d;
+
+    color: white;
+
+}
+
+.metodo-card label {
+
+    display: block;
+
+    margin: 15px 0;
+
+    cursor: pointer;
+
+}
+
+.btn-recarregar {
+
+    width: 100%;
+
+    background: #27d8cf;
+
+    color: #08141d;
+
+    border: none;
+
+    padding: 16px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.btn-recarregar:hover {
+
+    opacity: .9;
+
+}
+
+.pix-card {
+
+    margin-top: 30px;
+
+    background: #112332;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    color: white;
+
+}
+
+.pix-card textarea {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    margin-bottom: 15px;
+
+    min-height: 90px;
+
+    background: #08141d;
+
+    color: #27d8cf;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+}
+
+.pix-card button {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #27d8cf;
+
+    color: #08141d;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+.payment-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+}
+
+.payment-form input {
+
+    height: 58px;
+
+    border: none;
+
+    background: #1c2b36;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    color: rgb(10, 52, 63);
+
+    font-size: 16px;
+
+}
+
+.payment-form button {
+
+    height: 60px;
+
+    border: none;
+
+    background: #27d8cf;
+
+    color: #08141d;
+
+    font-weight: 700;
+
+    font-size: 25px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+}
+
+.row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+.saved-cards {
+
+    margin-top: 30px;
+
+}
+
+.saved-card {
+
+    padding: 16px;
+
+    background: #182734;
+
+    border-radius: 14px;
+
+    margin-bottom: 15px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.saved-card:hover {
+
+    background: #22394d;
+
+}
+
+.saved-card strong {
+
+    display: block;
+
+    color: white;
+
+}
+
+.saved-card span {
+
+    color: #8ea3b2;
+
+}
+
+.pix-card img {
+
+    width: 220px;
+
+    display: block;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+
+}
+
+.page-title {
+
+    margin-bottom: 30px;
+
+}
+
+.page-title h1 {
+
+    color: #fff;
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
+
+}
+
+.page-title p {
+
+    color: #27d8cf;
+
+}
+
+.selected-card {
+
+    margin-top: 25px;
+
+    background: #182734;
+
+    border-left: 5px solid #27d8cf;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+}
+
+.selected-card h3 {
+
+    color: #fff;
+
+    margin-bottom: 8px;
+
+}
+
+.selected-card p {
+
+    color: #27d8cf;
+
+    font-size: 22px;
+
+    margin-bottom: 6px;
+
+}
+
+.selected-card small {
+
+    color: #1b5f92;
+
+}
+
+.payment-selector button.active {
+
+    background: #27d8cf;
+    border-radius: 8px;
+    color: #08141d;
+    font-size: 18px;
+    font-weight: 700;
+
+}
