@@ -3,43 +3,39 @@
 ========================================================== */
 
 .balance-card {
+  width: 100%;
 
-    width: 100%;
-    
-    max-width: 420px;
+  max-width: 420px;
 
-    height: 220px;
+  min-height: 220px;
+  height: auto;
 
-    background: linear-gradient(160deg,
-            #0D1F2B,
-            #123142);
+  background: linear-gradient(160deg, #0d1f2b, #123142);
 
-    border-radius: 14px;
+  border-radius: 14px;
 
-    padding: 24px;
+  padding: 24px;
+  box-sizing: border-box;
 
-    display: flex;
+  overflow: hidden;
 
-    flex-direction: column;
+  display: flex;
 
-    justify-content: space-between;
+  flex-direction: column;
 
-    border: 1px solid rgba(255, 255, 255, .05);
+  justify-content: space-between;
 
-    box-shadow:
-        0 18px 45px rgba(0, 0, 0, .28);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 
-    transition: .30s;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 
+  transition: 0.3s;
 }
 
 .balance-card:hover {
+  transform: translateY(-5px);
 
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 25px 55px rgba(37, 216, 197, .20);
-
+  box-shadow: 0 25px 55px rgba(37, 216, 197, 0.2);
 }
 
 /* ==========================================================
@@ -47,45 +43,37 @@
 ========================================================== */
 
 .balance-header {
+  display: flex;
 
-    display: flex;
+  justify-content: space-between;
 
-    justify-content: space-between;
-
-    align-items: flex-start;
-
+  align-items: flex-start;
 }
 
 .balance-header small {
+  color: #8fb3c2;
 
-    color: #8FB3C2;
+  font-size: 13px;
 
-    font-size: 13px;
-
-    letter-spacing: .5px;
-
+  letter-spacing: 0.5px;
 }
 
 .balance-header h2 {
+  margin-top: 8px;
 
-    margin-top: 8px;
+  color: #ffffff;
 
-    color: #FFFFFF;
+  font-size: 34px;
 
-    font-size: 34px;
+  font-weight: 700;
 
-    font-weight: 700;
-
-    line-height: 1;
-
+  line-height: 1;
 }
 
 .balance-header svg {
+  font-size: 34px;
 
-    font-size: 34px;
-
-    color: #25D8C5;
-
+  color: #25d8c5;
 }
 
 /* ==========================================================
@@ -93,27 +81,23 @@
 ========================================================== */
 
 .balance-status {
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
+  gap: 10px;
 
-    gap: 10px;
+  margin-top: 8px;
 
-    margin-top: 8px;
+  color: #62e3b6;
 
-    color: #62E3B6;
+  font-size: 14px;
 
-    font-size: 14px;
-
-    font-weight: 600;
-
+  font-weight: 600;
 }
 
 .balance-status svg {
-
-    font-size: 16px;
-
+  font-size: 16px;
 }
 
 /* ==========================================================
@@ -121,15 +105,13 @@
 ========================================================== */
 
 .balance-divider {
+  width: 100%;
 
-    width: 100%;
+  height: 1px;
 
-    height: 1px;
+  background: rgba(255, 255, 255, 0.08);
 
-    background: rgba(255, 255, 255, .08);
-
-    margin: 14px 0;
-
+  margin: 14px 0;
 }
 
 /* ==========================================================
@@ -137,60 +119,51 @@
 ========================================================== */
 
 .balance-button {
+  margin-top: 18px;
 
-    margin-top: 18px;
+  width: 100%;
 
-    width: 100%;
+  height: 48px;
 
-    height: 48px;
+  border: none;
 
-    border: none;
+  border-radius: 16px;
 
-    border-radius: 16px;
+  background: #25d8c5;
 
-    background: #25D8C5;
+  color: #07141d;
 
-    color: #07141D;
+  display: flex;
 
-    display: flex;
+  justify-content: center;
 
-    justify-content: center;
+  align-items: center;
 
-    align-items: center;
+  gap: 10px;
 
-    gap: 10px;
+  cursor: pointer;
 
-    cursor: pointer;
+  font-size: 15px;
 
-    font-size: 15px;
+  font-weight: 700;
 
-    font-weight: 700;
-
-    transition: .30s;
-
+  transition: 0.3s;
 }
 
 .balance-button:hover {
+  background: #47f3e3;
 
-    background: #47F3E3;
+  transform: translateY(-2px);
 
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 12px 25px rgba(37, 216, 197, .35);
-
+  box-shadow: 0 12px 25px rgba(37, 216, 197, 0.35);
 }
 
 .balance-button:active {
-
-    transform: scale(.98);
-
+  transform: scale(0.98);
 }
 
 .balance-button svg {
-
-    font-size: 16px;
-
+  font-size: 16px;
 }
 
 /* ==========================================================
@@ -198,117 +171,92 @@
 ========================================================== */
 
 .balance-card.loading {
+  display: flex;
 
-    display: flex;
+  justify-content: center;
 
-    justify-content: center;
+  align-items: center;
 
-    align-items: center;
+  color: white;
 
-    color: white;
+  font-size: 18px;
 
-    font-size: 18px;
-
-    font-weight: 600;
-
+  font-weight: 600;
 }
 
 /* ==========================================================
    RESPONSIVIDADE
 ========================================================== */
 
-@media (max-width:1400px) {
-
-    .balance-card {
-
-        max-width: 100%;
-
-    }
-
+@media (max-width: 1400px) {
+  .balance-card {
+    max-width: 100%;
+  }
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
+  .balance-card {
+    min-height: 210px;
+  }
 
-    .balance-card {
-
-        min-height: 210px;
-
-    }
-
-    .balance-header h2 {
-
-        font-size: 30px;
-
-    }
-
+  .balance-header h2 {
+    font-size: 30px;
+  }
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
+  .balance-card {
+    width: 100%;
 
-    .balance-card {
+    max-width: none;
+  }
 
-        width: 100%;
-
-        max-width: none;
-
-    }
-
-    .balance-info {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
+  .balance-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
+  .balance-card {
+    width: 100%;
 
-    .balance-card {
+    max-width: 100%;
 
-        padding: 20px;
+    /* 'min-height: auto' has compatibility issues in some Firefox versions */
+    min-height: 0;
 
-        border-radius: 20px;
+    padding: 20px;
 
-    }
+    border-radius: 18px;
+  }
 
-    .balance-header {
+  .balance-header {
+    margin-bottom: 15px;
+  }
 
-        margin-bottom: 12px;
+  .balance-header h2 {
+    font-size: 26px;
+  }
 
-    }
+  .balance-header svg {
+    font-size: 28px;
+  }
 
-    .balance-header h2 {
+  .balance-button {
+    width: 100%;
 
-        font-size: 28px;
+    height: 48px;
 
-    }
-
-    .balance-info {
-
-        gap: 14px;
-
-    }
-
-    .balance-button {
-
-        height: 46px;
-
-        font-size: 14px;
-
-    }
-
+    font-size: 15px;
+  }
 }
 
-@media (max-width:520px) {
+@media (max-width: 520px) {
+  .balance-info {
+    grid-template-columns: 1fr;
 
-    .balance-info {
-
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-
-    }
-
+    gap: 12px;
+  }
 }
 
 /* ==========================================================
@@ -316,29 +264,21 @@
 ========================================================== */
 
 .balance-card {
-
-    animation: balanceFade .45s ease;
-
+  animation: balanceFade 0.45s ease;
 }
 
 @keyframes balanceFade {
+  from {
+    opacity: 0;
 
-    from {
+    transform: translateY(20px);
+  }
 
-        opacity: 0;
+  to {
+    opacity: 1;
 
-        transform: translateY(20px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-
+    transform: translateY(0);
+  }
 }
 
 /* ==========================================================
@@ -346,15 +286,47 @@
 ========================================================== */
 
 .balance-card:hover .balance-header svg {
+  transform: rotate(-10deg) scale(1.08);
 
-    transform: rotate(-10deg) scale(1.08);
-
-    transition: .30s;
-
+  transition: 0.3s;
 }
 
 .balance-card:hover .balance-status {
+  color: #25d8c5;
+}
 
-    color: #25D8C5;
+@media (max-width: 480px) {
+  .balance-card {
+    width: 100%;
 
+    max-width: 100%;
+
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+  .balance-header h2 {
+    font-size: 22px;
+  }
+
+  .balance-header small {
+    font-size: 12px;
+  }
+
+  .balance-status {
+    font-size: 13px;
+
+    gap: 8px;
+  }
+
+  .balance-status svg {
+    font-size: 14px;
+  }
+
+  .balance-button {
+    height: 45px;
+
+    font-size: 14px;
+  }
 }

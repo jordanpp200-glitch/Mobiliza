@@ -20,7 +20,9 @@
 
 .dashboard-content{
 
-    flex:1;
+     flex:1;
+
+    width:100%;
 
     margin-left:80px;
 
@@ -28,6 +30,7 @@
 
     min-height:100vh;
 
+    overflow-x:hidden;
     transition:.35s;
 
 }
@@ -70,7 +73,7 @@
 .dashboard-grid{
 
     display:grid;
-
+ width:100%;
     grid-template-columns:
 
         minmax(520px,2fr)
@@ -255,7 +258,7 @@
 .activity-item{
 
     display:flex;
-
+ width:100%;
     justify-content:space-between;
 
     align-items:center;
@@ -399,7 +402,7 @@
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 
     gap:20px;
 
@@ -496,7 +499,7 @@
 
     display:grid;
 
-    grid-template-columns:1.4fr 420px;
+     grid-template-columns:minmax(0,1.4fr) minmax(280px,420px);
 
     align-items:center;
 
@@ -509,7 +512,7 @@
 .banner-text small{
 
     color:#6FE7DB;
-
+ width:100%;
     text-transform:uppercase;
 
     letter-spacing:2px;
@@ -559,6 +562,9 @@
 .banner-button{
 
     margin-top:30px;
+  width:fit-content;
+
+    max-width:100%;
 
     border:none;
 
@@ -583,7 +589,7 @@
 .banner-button:hover{
 
     transform:translateY(-4px);
-
+ width:100%;
     background:#42F3DF;
 
 }
@@ -603,6 +609,9 @@
     width:100%;
 
     max-width:360px;
+ height:auto;
+
+    object-fit:contain;
 
     border-radius:22px;
 
@@ -754,9 +763,11 @@
 
     .dashboard-content{
 
-        margin-left:0;
+       width:100%;
 
-        padding:18px;
+    margin-left:0;
+
+    padding:15px;
 
     }
 
@@ -893,6 +904,105 @@
         opacity:1;
 
         transform:translateY(0);
+
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .dashboard-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:15px;
+
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-content {
+        padding: 20px;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+
+    .banner-image img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+}
+
+/* Celular */
+@media (max-width:480px){
+
+    .dashboard-content{
+
+        padding:12px;
+
+    }
+
+    .dashboard-section{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+    .banner-content{
+
+        padding:18px;
+
+    }
+
+    .banner-text h1{
+
+        font-size:28px;
+
+    }
+
+    .banner-text h3{
+
+        font-size:20px;
+
+    }
+
+    .banner-text p{
+
+        font-size:14px;
+
+        line-height:24px;
+
+    }
+
+    .banner-button{
+
+        width:100%;
+
+    }
+
+    .shortcut-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .activity-item{
+
+        width:100%;
 
     }
 
