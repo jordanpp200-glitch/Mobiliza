@@ -110,9 +110,11 @@
 
     border-radius:14px;
 
-    border:2px solid #20d6c5;
+    background:#20d6c5;
 
-    color:white;
+    color:#05161d;
+
+    font-weight:700;
 
     text-decoration:none;
 
