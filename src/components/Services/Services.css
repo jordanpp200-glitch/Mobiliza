@@ -1,4 +1,10 @@
+/* ==========================================================
+   SERVICES
+========================================================== */
+
 .services{
+
+    width:100%;
 
     padding:120px 80px;
 
@@ -6,15 +12,23 @@
 
 }
 
+/* ==========================================================
+   HEADER
+========================================================== */
+
 .services-header{
 
     text-align:center;
 
-    margin-bottom:70px;
+    max-width:850px;
+
+    margin:0 auto 70px;
 
 }
 
 .services-header span{
+
+    display:inline-block;
 
     color:#20d6c5;
 
@@ -22,33 +36,39 @@
 
     letter-spacing:3px;
 
+    margin-bottom:15px;
+
 }
 
 .services-header h2{
 
-    color:white;
+    color:#ffffff;
 
     font-size:48px;
 
-    margin:20px 0;
+    line-height:1.2;
 
-    line-height:60px;
+    margin-bottom:20px;
 
 }
 
 .services-header p{
 
+    max-width:700px;
+
+    margin:0 auto;
+
     color:#b9c6cb;
 
     font-size:19px;
 
-    width:700px;
-
-    margin:auto;
-
     line-height:34px;
 
 }
+
+/* ==========================================================
+   GRID
+========================================================== */
 
 .services-grid{
 
@@ -60,6 +80,10 @@
 
 }
 
+/* ==========================================================
+   CARD
+========================================================== */
+
 .service-card{
 
     background:#0d2530;
@@ -68,21 +92,25 @@
 
     border-radius:28px;
 
-    transition:.35s;
-
     border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
 
 }
 
 .service-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 
     border-color:#20d6c5;
 
     box-shadow:0 20px 50px rgba(0,0,0,.35);
 
 }
+
+/* ==========================================================
+   ÍCONE
+========================================================== */
 
 .service-icon{
 
@@ -94,13 +122,13 @@
 
     background:#20d6c5;
 
+    color:#06161d;
+
     display:flex;
 
     justify-content:center;
 
     align-items:center;
-
-    color:#06161d;
 
     font-size:34px;
 
@@ -108,9 +136,13 @@
 
 }
 
+/* ==========================================================
+   TEXTO
+========================================================== */
+
 .service-card h3{
 
-    color:white;
+    color:#ffffff;
 
     font-size:24px;
 
@@ -122,50 +154,196 @@
 
     color:#c3d0d5;
 
-    line-height:30px;
-
     font-size:17px;
 
-}
-
-@media(max-width:1100px){
-
-.services-grid{
-
-grid-template-columns:repeat(2,1fr);
+    line-height:30px;
 
 }
 
-}
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
 
-@media(max-width:768px){
+@media (max-width:1200px){
 
-.services{
+    .services{
 
-padding:90px 25px;
+        padding:100px 50px;
 
-}
+    }
 
-.services-header h2{
+    .services-grid{
 
-font-size:34px;
+        grid-template-columns:repeat(2,1fr);
 
-line-height:42px;
+        gap:30px;
 
-}
+    }
 
-.services-header p{
+    .services-header h2{
 
-width:100%;
+        font-size:42px;
 
-font-size:16px;
-
-}
-
-.services-grid{
-
-grid-template-columns:1fr;
+    }
 
 }
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .services{
+
+        padding:80px 35px;
+
+    }
+
+    .services-header{
+
+        margin-bottom:50px;
+
+    }
+
+    .services-header h2{
+
+        font-size:36px;
+
+    }
+
+    .services-header p{
+
+        max-width:100%;
+
+        font-size:17px;
+
+        line-height:30px;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .services{
+
+        padding:70px 20px;
+
+    }
+
+    .services-header span{
+
+        font-size:14px;
+
+        letter-spacing:2px;
+
+    }
+
+    .services-header h2{
+
+        font-size:30px;
+
+        line-height:1.2;
+
+    }
+
+    .services-header p{
+
+        font-size:16px;
+
+        line-height:28px;
+
+    }
+
+    .service-card{
+
+        padding:30px 25px;
+
+        border-radius:20px;
+
+    }
+
+    .service-icon{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:28px;
+
+        border-radius:18px;
+
+        margin-bottom:20px;
+
+    }
+
+    .service-card h3{
+
+        font-size:22px;
+
+    }
+
+    .service-card p{
+
+        font-size:16px;
+
+        line-height:28px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .services{
+
+        padding:60px 15px;
+
+    }
+
+    .services-header h2{
+
+        font-size:26px;
+
+    }
+
+    .services-header p{
+
+        font-size:15px;
+
+        line-height:26px;
+
+    }
+
+    .service-card{
+
+        padding:25px 20px;
+
+    }
+
+    .service-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }
 
 }
