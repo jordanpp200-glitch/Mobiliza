@@ -2,331 +2,432 @@
    BALANCE CARD - MOBILIZA
 ========================================================== */
 
-.balance-card {
-  width: 100%;
+.balance-card{
 
-  max-width: 420px;
+    width:100%;
 
-  min-height: 220px;
-  height: auto;
+    max-width:420px;
 
-  background: linear-gradient(160deg, #0d1f2b, #123142);
+    min-height:220px;
 
-  border-radius: 14px;
+    background:linear-gradient(160deg,#0D1F2B,#123142);
 
-  padding: 24px;
-  box-sizing: border-box;
+    border-radius:18px;
 
-  overflow: hidden;
+    padding:24px;
 
-  display: flex;
+    display:flex;
 
-  flex-direction: column;
+    flex-direction:column;
 
-  justify-content: space-between;
+    justify-content:space-between;
 
-  border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow:hidden;
 
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    border:1px solid rgba(255,255,255,.05);
 
-  transition: 0.3s;
+    box-shadow:0 18px 45px rgba(0,0,0,.28);
+
+    transition:.35s;
+
+    animation:balanceFade .45s ease;
+
 }
 
-.balance-card:hover {
-  transform: translateY(-5px);
+.balance-card:hover{
 
-  box-shadow: 0 25px 55px rgba(37, 216, 197, 0.2);
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 55px rgba(37,216,197,.22);
+
 }
 
 /* ==========================================================
    HEADER
 ========================================================== */
 
-.balance-header {
-  display: flex;
+.balance-header{
 
-  justify-content: space-between;
+    display:flex;
 
-  align-items: flex-start;
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:15px;
+
 }
 
-.balance-header small {
-  color: #8fb3c2;
+.balance-header small{
 
-  font-size: 13px;
+    display:block;
 
-  letter-spacing: 0.5px;
+    color:#8FB3C2;
+
+    font-size:13px;
+
+    letter-spacing:.5px;
+
 }
 
-.balance-header h2 {
-  margin-top: 8px;
+.balance-header h2{
 
-  color: #ffffff;
+    margin-top:8px;
 
-  font-size: 34px;
+    color:#FFFFFF;
 
-  font-weight: 700;
+    font-size:34px;
 
-  line-height: 1;
+    font-weight:700;
+
+    line-height:1;
+
 }
 
-.balance-header svg {
-  font-size: 34px;
+.balance-header svg{
 
-  color: #25d8c5;
+    color:#25D8C5;
+
+    font-size:34px;
+
+    transition:.30s;
+
 }
 
 /* ==========================================================
    STATUS
 ========================================================== */
 
-.balance-status {
-  display: flex;
+.balance-status{
 
-  align-items: center;
+    display:flex;
 
-  gap: 10px;
+    align-items:center;
 
-  margin-top: 8px;
+    gap:10px;
 
-  color: #62e3b6;
+    margin-top:12px;
 
-  font-size: 14px;
+    color:#62E3B6;
 
-  font-weight: 600;
+    font-size:14px;
+
+    font-weight:600;
+
 }
 
-.balance-status svg {
-  font-size: 16px;
+.balance-status svg{
+
+    font-size:16px;
+
 }
 
 /* ==========================================================
    DIVISÓRIA
 ========================================================== */
 
-.balance-divider {
-  width: 100%;
+.balance-divider{
 
-  height: 1px;
+    width:100%;
 
-  background: rgba(255, 255, 255, 0.08);
+    height:1px;
 
-  margin: 14px 0;
+    margin:18px 0;
+
+    background:rgba(255,255,255,.08);
+
 }
 
 /* ==========================================================
    BOTÃO
 ========================================================== */
 
-.balance-button {
-  margin-top: 18px;
+.balance-button{
 
-  width: 100%;
+    width:100%;
 
-  height: 48px;
+    height:50px;
 
-  border: none;
+    margin-top:18px;
 
-  border-radius: 16px;
+    border:none;
 
-  background: #25d8c5;
+    border-radius:16px;
 
-  color: #07141d;
+    background:#25D8C5;
 
-  display: flex;
+    color:#07141D;
 
-  justify-content: center;
+    display:flex;
 
-  align-items: center;
+    justify-content:center;
 
-  gap: 10px;
+    align-items:center;
 
-  cursor: pointer;
+    gap:10px;
 
-  font-size: 15px;
+    cursor:pointer;
 
-  font-weight: 700;
+    font-size:15px;
 
-  transition: 0.3s;
+    font-weight:700;
+
+    transition:.30s;
+
 }
 
-.balance-button:hover {
-  background: #47f3e3;
+.balance-button:hover{
 
-  transform: translateY(-2px);
+    background:#47F3E3;
 
-  box-shadow: 0 12px 25px rgba(37, 216, 197, 0.35);
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(37,216,197,.35);
+
 }
 
-.balance-button:active {
-  transform: scale(0.98);
+.balance-button:active{
+
+    transform:scale(.98);
+
 }
 
-.balance-button svg {
-  font-size: 16px;
+.balance-button svg{
+
+    font-size:16px;
+
 }
 
 /* ==========================================================
    LOADING
 ========================================================== */
 
-.balance-card.loading {
-  display: flex;
+.balance-card.loading{
 
-  justify-content: center;
+    justify-content:center;
 
-  align-items: center;
+    align-items:center;
 
-  color: white;
+    color:#FFFFFF;
 
-  font-size: 18px;
+    font-size:18px;
 
-  font-weight: 600;
+    font-weight:600;
+
 }
 
 /* ==========================================================
-   RESPONSIVIDADE
+   DESTAQUES
 ========================================================== */
 
-@media (max-width: 1400px) {
-  .balance-card {
-    max-width: 100%;
-  }
+.balance-card:hover .balance-header svg{
+
+    transform:rotate(-10deg) scale(1.08);
+
 }
 
-@media (max-width: 1200px) {
-  .balance-card {
-    min-height: 210px;
-  }
+.balance-card:hover .balance-status{
 
-  .balance-header h2 {
-    font-size: 30px;
-  }
-}
+    color:#25D8C5;
 
-@media (max-width: 992px) {
-  .balance-card {
-    width: 100%;
-
-    max-width: none;
-  }
-
-  .balance-info {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .balance-card {
-    width: 100%;
-
-    max-width: 100%;
-
-    /* 'min-height: auto' has compatibility issues in some Firefox versions */
-    min-height: 0;
-
-    padding: 20px;
-
-    border-radius: 18px;
-  }
-
-  .balance-header {
-    margin-bottom: 15px;
-  }
-
-  .balance-header h2 {
-    font-size: 26px;
-  }
-
-  .balance-header svg {
-    font-size: 28px;
-  }
-
-  .balance-button {
-    width: 100%;
-
-    height: 48px;
-
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 520px) {
-  .balance-info {
-    grid-template-columns: 1fr;
-
-    gap: 12px;
-  }
 }
 
 /* ==========================================================
    ANIMAÇÃO
 ========================================================== */
 
-.balance-card {
-  animation: balanceFade 0.45s ease;
-}
+@keyframes balanceFade{
 
-@keyframes balanceFade {
-  from {
-    opacity: 0;
+    from{
 
-    transform: translateY(20px);
-  }
+        opacity:0;
 
-  to {
-    opacity: 1;
+        transform:translateY(20px);
 
-    transform: translateY(0);
-  }
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
 /* ==========================================================
-   DESTAQUE
+   NOTEBOOK
 ========================================================== */
 
-.balance-card:hover .balance-header svg {
-  transform: rotate(-10deg) scale(1.08);
+@media (max-width:1200px){
 
-  transition: 0.3s;
+    .balance-card{
+
+        max-width:100%;
+
+        min-height:210px;
+
+    }
+
+    .balance-header h2{
+
+        font-size:30px;
+
+    }
+
 }
 
-.balance-card:hover .balance-status {
-  color: #25d8c5;
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .balance-card{
+
+        max-width:none;
+
+    }
+
+    .balance-info{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:16px;
+
+    }
+
 }
 
-@media (max-width: 480px) {
-  .balance-card {
-    width: 100%;
+/* ==========================================================
+   CELULAR
+========================================================== */
 
-    max-width: 100%;
+@media (max-width:768px){
 
-    padding: 18px;
+    .balance-card{
 
-    border-radius: 16px;
-  }
+        width:100%;
 
-  .balance-header h2 {
-    font-size: 22px;
-  }
+        max-width:100%;
 
-  .balance-header small {
-    font-size: 12px;
-  }
+        padding:20px;
 
-  .balance-status {
-    font-size: 13px;
+        border-radius:18px;
 
-    gap: 8px;
-  }
+    }
 
-  .balance-status svg {
-    font-size: 14px;
-  }
+    .balance-header{
 
-  .balance-button {
-    height: 45px;
+        margin-bottom:12px;
 
-    font-size: 14px;
-  }
+    }
+
+    .balance-header h2{
+
+        font-size:28px;
+
+    }
+
+    .balance-header svg{
+
+        font-size:28px;
+
+    }
+
+    .balance-status{
+
+        font-size:14px;
+
+    }
+
+    .balance-button{
+
+        height:48px;
+
+        font-size:15px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:520px){
+
+    .balance-info{
+
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .balance-card{
+
+        padding:18px;
+
+        border-radius:16px;
+
+    }
+
+    .balance-header{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .balance-header h2{
+
+        font-size:24px;
+
+    }
+
+    .balance-header small{
+
+        font-size:12px;
+
+    }
+
+    .balance-header svg{
+
+        font-size:26px;
+
+    }
+
+    .balance-status{
+
+        font-size:13px;
+
+        gap:8px;
+
+    }
+
+    .balance-status svg{
+
+        font-size:14px;
+
+    }
+
+    .balance-button{
+
+        height:46px;
+
+        font-size:14px;
+
+    }
+
 }
