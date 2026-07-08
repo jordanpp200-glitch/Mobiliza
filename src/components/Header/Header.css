@@ -1,3 +1,7 @@
+/* ==========================================================
+   HEADER - MOBILIZA
+========================================================== */
+
 .header{
 
     position:fixed;
@@ -20,14 +24,19 @@
 
     z-index:1000;
 
-    -webkit-backdrop-filter: blur(18px);
-    backdrop-filter: blur(18px);
+    background:rgba(6,22,29,.82);
 
-    background:rgba(6,22,29,.78);
+    -webkit-backdrop-filter:blur(18px);
+
+    backdrop-filter:blur(18px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
 }
+
+/* ==========================================================
+   LOGO
+========================================================== */
 
 .logo{
 
@@ -37,41 +46,53 @@
 
     gap:18px;
 
+    flex-shrink:0;
+
 }
 
 .logo-icon{
 
     font-size:52px;
 
-    color:#20d6c5;
+    color:#20D6C5;
 
 }
 
 .logo h1{
 
-    color:#fff;
+    color:#FFFFFF;
 
     font-size:34px;
 
-    line-height:35px;
+    line-height:1;
+
+    margin:0;
 
 }
 
 .logo span{
 
-    color:#95d9d1;
+    display:block;
 
-    letter-spacing:2px;
+    color:#95D9D1;
 
     font-size:13px;
+
+    letter-spacing:2px;
 
     text-transform:uppercase;
 
 }
 
+/* ==========================================================
+   MENU
+========================================================== */
+
 .menu{
 
     display:flex;
+
+    align-items:center;
 
     gap:45px;
 
@@ -79,145 +100,290 @@
 
 .menu a{
 
-    color:#d5d5d5;
+    color:#D5D5D5;
 
     text-decoration:none;
-
-    transition:.3s;
 
     font-size:16px;
 
     font-weight:500;
 
+    transition:.3s;
+
 }
 
 .menu a:hover{
 
-    color:#20d6c5;
+    color:#20D6C5;
 
 }
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
 
 .buttons{
 
     display:flex;
 
+    align-items:center;
+
     gap:15px;
-
-}
-
-.btn-login{
-
-    padding:13px 32px;
-
-    border-radius:14px;
-
-    background:#20d6c5;
-
-    color:#05161d;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.btn-login:hover{
-
-    background:#20d6c5;
-
-    color:#05161d;
-
-}
-
-.btn-register{
-
-    padding:13px 32px;
-
-    border-radius:14px;
-
-    background:#20d6c5;
-
-    color:#05161d;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.btn-register:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 15px 35px rgba(32,214,197,.35);
-
-}
-
-@media(max-width:1100px){
-
-.menu{
-
-display:none;
-
-}
-
-.header{
-
-padding:0 25px;
-
-}
-
-.logo h1{
-
-font-size:28px;
-
-}
-
-.buttons{
-
-gap:10px;
 
 }
 
 .btn-login,
 .btn-register{
 
-padding:10px 20px;
+    display:flex;
 
-font-size:14px;
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:150px;
+
+    height:56px;
+
+    padding:0 30px;
+
+    border-radius:16px;
+
+    background:#20D6C5;
+
+    color:#05161D;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn-login:hover,
+.btn-register:hover{
+
+    transform:translateY(-3px);
+
+    background:#42EEE0;
+
+    box-shadow:0 15px 35px rgba(32,214,197,.35);
 
 }
 
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .header{
+
+        padding:0 35px;
+
+    }
+
+    .menu{
+
+        gap:25px;
+
+    }
+
+    .btn-login,
+    .btn-register{
+
+        min-width:130px;
+
+        font-size:16px;
+
+    }
+
 }
 
-@media(max-width:768px){
+/* ==========================================================
+   TABLET
+========================================================== */
 
-.header{
+@media (max-width:992px){
 
-height:80px;
+    .header{
+
+        padding:0 20px;
+
+        height:82px;
+
+    }
+
+    .menu{
+
+        display:none;
+
+    }
+
+    .logo-icon{
+
+        font-size:42px;
+
+    }
+
+    .logo h1{
+
+        font-size:28px;
+
+    }
+
+    .logo span{
+
+        font-size:11px;
+
+    }
+
+    .buttons{
+
+        gap:10px;
+
+    }
+
+    .btn-login,
+    .btn-register{
+
+        min-width:110px;
+
+        height:48px;
+
+        font-size:15px;
+
+        padding:0 18px;
+
+        border-radius:14px;
+
+    }
 
 }
 
-.logo-icon{
+/* ==========================================================
+   CELULAR
+========================================================== */
 
-font-size:40px;
+@media (max-width:768px){
+
+    .header{
+
+        height:78px;
+
+        padding:0 12px;
+
+    }
+
+    .logo{
+
+        gap:10px;
+
+    }
+
+    .logo-icon{
+
+        font-size:36px;
+
+    }
+
+    .logo h1{
+
+        font-size:22px;
+
+    }
+
+    .logo span{
+
+        font-size:10px;
+
+        letter-spacing:1px;
+
+    }
+
+    .buttons{
+
+        gap:8px;
+
+    }
+
+    .btn-login,
+    .btn-register{
+
+        min-width:95px;
+
+        height:44px;
+
+        font-size:14px;
+
+        padding:0 12px;
+
+        border-radius:14px;
+
+    }
 
 }
 
-.logo h1{
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
 
-font-size:24px;
+@media (max-width:480px){
 
-}
+    .header{
 
-.logo span{
+        height:72px;
 
-font-size:11px;
+        padding:0 10px;
 
-}
+    }
+
+    .logo{
+
+        gap:8px;
+
+    }
+
+    .logo-icon{
+
+        font-size:30px;
+
+    }
+
+    .logo h1{
+
+        font-size:18px;
+
+    }
+
+    .logo span{
+
+        font-size:9px;
+
+    }
+
+    .buttons{
+
+        gap:6px;
+
+    }
+
+    .btn-login,
+    .btn-register{
+
+        min-width:82px;
+
+        height:40px;
+
+        padding:0 10px;
+
+        font-size:13px;
+
+        border-radius:12px;
+
+    }
 
 }

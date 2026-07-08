@@ -1,40 +1,38 @@
 /* ==========================================================
-   MOBILIZA - TICKET CARD
+   TICKET CARD - MOBILIZA
 ========================================================== */
 
-.ticket-card {
+.ticket-card{
 
-    position: relative;
+    position:relative;
 
-    width: 50%;
-    max-width: 100%;
-    height: 220px;
+    width:100%;
 
-    min-height: 100px;
+    max-width:520px;
 
-    border-radius: 15px;
+    min-height:260px;
 
-    overflow: hidden;
+    border-radius:20px;
 
-    background-size: cover;
+    overflow:hidden;
 
-    background-position: center;
+    background-size:cover;
 
-    background-repeat: no-repeat;
+    background-position:center;
 
-    box-shadow:
-        0 18px 45px rgba(0, 0, 0, .30);
+    background-repeat:no-repeat;
 
-    transition: .35s;
+    box-shadow:0 18px 45px rgba(0,0,0,.30);
+
+    transition:.35s;
 
 }
 
-.ticket-card:hover {
+.ticket-card:hover{
 
-    transform: translateY(-6px);
+    transform:translateY(-6px);
 
-    box-shadow:
-        0 25px 60px rgba(0, 0, 0, .45);
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
 
 }
 
@@ -42,25 +40,24 @@
    OVERLAY
 ========================================================== */
 
-.ticket-overlay {
+.ticket-overlay{
 
-    width: 100%;
+    width:100%;
 
-    height: 100%;
+    height:100%;
 
-    padding: 28px;
+    padding:28px;
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    background:
-
-        linear-gradient(rgba(0, 0, 0, .10),
-
-            rgba(0, 0, 0, .55));
+    background:linear-gradient(
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.60)
+    );
 
 }
 
@@ -68,45 +65,45 @@
    HEADER
 ========================================================== */
 
-.ticket-header {
+.ticket-header{
 
-    display: flex;
+    display:flex;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    align-items: flex-start;
-
-}
-
-.ticket-header small {
-
-    color: #D9F8F5;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    font-size: 12px;
+    align-items:flex-start;
 
 }
 
-.ticket-header h2 {
+.ticket-header small{
 
-    margin-top: 8px;
+    color:#D9F8F5;
 
-    color: white;
+    font-size:12px;
 
-    font-size: 28px;
+    letter-spacing:2px;
 
-    font-weight: 700;
+    text-transform:uppercase;
 
 }
 
-.ticket-header svg {
+.ticket-header h2{
 
-    color: white;
+    margin-top:8px;
 
-    font-size: 36px;
+    color:#FFFFFF;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.ticket-header svg{
+
+    color:#FFFFFF;
+
+    font-size:36px;
 
 }
 
@@ -114,17 +111,17 @@
    NÚMERO
 ========================================================== */
 
-.ticket-number {
+.ticket-number{
 
-    margin-top: 98px;
+    margin-top:30px;
 
-    font-size: 15px;
+    color:#FFFFFF;
 
-    letter-spacing: 3px;
+    font-size:18px;
 
-    color: white;
+    font-weight:700;
 
-    font-weight: 700;
+    letter-spacing:3px;
 
 }
 
@@ -132,57 +129,55 @@
    USUÁRIO
 ========================================================== */
 
-.ticket-user {
+.ticket-user{
 
-    margin-top: 5px;
+    margin-top:8px;
 
-    color: #D6F5F3;
+    color:#D6F5F3;
 
-    font-size: 15px;
-
-    font-weight: 500;
+    font-size:15px;
 
 }
 
 /* ==========================================================
-   INFO
+   INFORMAÇÕES
 ========================================================== */
 
-.ticket-info {
+.ticket-info{
 
-    display: flex;
+    display:flex;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    margin-top: 28px;
+    gap:20px;
 
-}
-
-.ticket-info div {
-
-    display: flex;
-
-    flex-direction: column;
+    margin-top:25px;
 
 }
 
-.ticket-info small {
+.ticket-info div{
 
-     margin-top: -70px;
+    display:flex;
 
-    color: #C9EAE8;
-
-    font-size: 10px;
+    flex-direction:column;
 
 }
 
-.ticket-info strong {
+.ticket-info small{
 
-    margin-top: 5px;
+    color:#C9EAE8;
 
-    color: white;
+    font-size:11px;
 
-    font-size: 12px;
+}
+
+.ticket-info strong{
+
+    margin-top:6px;
+
+    color:#FFFFFF;
+
+    font-size:14px;
 
 }
 
@@ -190,15 +185,15 @@
    FOOTER
 ========================================================== */
 
-.ticket-footer {
+.ticket-footer{
 
-    display: flex;
+    display:flex;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    align-items: center;
+    align-items:center;
 
-    margin-top: 35px;
+    margin-top:30px;
 
 }
 
@@ -206,37 +201,39 @@
    SALDO
 ========================================================== */
 
-.ticket-balance {
+.ticket-balance{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 18px;
-
-}
-
-.ticket-balance svg {
-
-    font-size: 34px;
-
-    color: #25D8C5;
+    gap:16px;
 
 }
 
-.ticket-balance small {
+.ticket-balance svg{
 
-    color: #D6F5F3;
+    font-size:34px;
+
+    color:#25D8C5;
 
 }
 
-.ticket-balance h3 {
+.ticket-balance small{
 
-    color: white;
+    color:#D6F5F3;
 
-    margin-top: 5px;
+    font-size:13px;
 
-    font-size: 30px;
+}
+
+.ticket-balance h3{
+
+    color:#FFFFFF;
+
+    font-size:30px;
+
+    margin-top:4px;
 
 }
 
@@ -244,31 +241,33 @@
    QR CODE
 ========================================================== */
 
-.ticket-qr {
+.ticket-qr{
 
-    width: 70px;
+    width:72px;
 
-    height: 70px;
+    height:72px;
 
-    border-radius: 18px;
+    border-radius:18px;
 
-    background: rgba(255, 255, 255, .15);
+    background:rgba(255,255,255,.15);
 
-    display: flex;
+    -webkit-backdrop-filter:blur(10px);
 
-    justify-content: center;
+    backdrop-filter:blur(10px);
 
-    align-items: center;
+    display:flex;
 
-    backdrop-filter: blur(10px);
+    justify-content:center;
+
+    align-items:center;
 
 }
 
-.ticket-qr svg {
+.ticket-qr svg{
 
-    color: white;
+    color:#FFFFFF;
 
-    font-size: 38px;
+    font-size:38px;
 
 }
 
@@ -276,83 +275,185 @@
    LOADING
 ========================================================== */
 
-.ticket-card.loading {
+.ticket-card.loading{
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    justify-content:center;
 
-    align-items: center;
+    align-items:center;
 
-    background:
+    background:linear-gradient(
+        135deg,
+        #0D1F2B,
+        #112736
+    );
 
-        linear-gradient(135deg,
+    color:#FFFFFF;
 
-            #0D1F2B,
+    font-size:22px;
 
-            #112736);
-
-    color: white;
-
-    font-size: 22px;
-
-    font-weight: 600;
+    font-weight:600;
 
 }
 
 /* ==========================================================
-   RESPONSIVO
+   NOTEBOOK
 ========================================================== */
 
-@media(max-width:768px) {
+@media (max-width:1200px){
 
-    .ticket-overlay {
+    .ticket-card{
 
-        padding: 20px;
-
-    }
-
-    .ticket-header h2 {
-
-        font-size: 22px;
+        max-width:100%;
 
     }
 
-    .ticket-number {
+}
 
-        font-size: 22px;
+/* ==========================================================
+   TABLET
+========================================================== */
 
-    }
+@media (max-width:992px){
 
-    .ticket-balance h3 {
+    .ticket-card{
 
-        font-size: 24px;
-
-    }
-
-    .ticket-info {
-
-        flex-direction: column;
-
-        gap: 15px;
+        min-height:240px;
 
     }
 
-    .ticket-footer {
+}
 
-        flex-direction: column;
+/* ==========================================================
+   CELULAR
+========================================================== */
 
-        align-items: flex-start;
+@media (max-width:768px){
 
-        gap: 20px;
+    .ticket-card{
+
+        width:100%;
+
+        min-height:0;
+
+        border-radius:18px;
 
     }
 
-    .ticket-qr {
+    .ticket-overlay{
 
-        width: 60px;
+        padding:22px;
 
-        height: 60px;
+    }
+
+    .ticket-header h2{
+
+        font-size:22px;
+
+    }
+
+    .ticket-header svg{
+
+        font-size:30px;
+
+    }
+
+    .ticket-number{
+
+        margin-top:20px;
+
+        font-size:16px;
+
+    }
+
+    .ticket-user{
+
+        font-size:14px;
+
+    }
+
+    .ticket-info{
+
+        flex-direction:column;
+
+        gap:14px;
+
+    }
+
+    .ticket-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .ticket-balance h3{
+
+        font-size:24px;
+
+    }
+
+    .ticket-qr{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .ticket-qr svg{
+
+        font-size:30px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .ticket-overlay{
+
+        padding:18px;
+
+    }
+
+    .ticket-header h2{
+
+        font-size:20px;
+
+    }
+
+    .ticket-number{
+
+        font-size:15px;
+
+    }
+
+    .ticket-balance h3{
+
+        font-size:22px;
+
+    }
+
+    .ticket-qr{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
+    .ticket-qr svg{
+
+        font-size:26px;
 
     }
 

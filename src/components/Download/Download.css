@@ -1,32 +1,72 @@
+/* ==========================================================
+   DOWNLOAD SECTION - MOBILIZA
+========================================================== */
+
 .download{
+
+    width:100%;
 
     padding:130px 80px;
 
-    background:linear-gradient(180deg,#0b2430,#07161d);
+    background:linear-gradient(180deg,#0B2430,#07161D);
 
     text-align:center;
 
 }
 
-.download h2{
+/* ==========================================================
+   CONTAINER
+========================================================== */
 
-    color:white;
+.download-container{
 
-    font-size:52px;
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
 
 }
 
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.download h2{
+
+    color:#FFFFFF;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================================
+   TEXTO
+========================================================== */
+
 .download p{
 
-    color:#c4d0d3;
+    max-width:700px;
 
-    margin:30px auto;
+    margin:0 auto 40px;
 
-    width:700px;
+    color:#C4D0D3;
+
+    font-size:20px;
 
     line-height:35px;
 
 }
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
 
 .download-buttons{
 
@@ -34,26 +74,190 @@
 
     justify-content:center;
 
+    align-items:center;
+
     gap:25px;
+
+    flex-wrap:wrap;
 
 }
 
 .download-buttons button{
 
+    min-width:220px;
+
     padding:18px 45px;
 
     border:none;
 
-    border-radius:15px;
+    border-radius:16px;
 
-    background:#20d6c5;
+    background:#20D6C5;
 
-    color:#05161d;
+    color:#05161D;
 
     font-size:18px;
 
     font-weight:700;
 
     cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.download-buttons button:hover{
+
+    transform:translateY(-5px);
+
+    background:#42EEE0;
+
+    box-shadow:0 15px 35px rgba(32,214,197,.35);
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .download{
+
+        padding:110px 50px;
+
+    }
+
+    .download h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .download{
+
+        padding:90px 35px;
+
+    }
+
+    .download h2{
+
+        font-size:40px;
+
+    }
+
+    .download p{
+
+        max-width:100%;
+
+        font-size:18px;
+
+        line-height:32px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .download{
+
+        padding:70px 20px;
+
+    }
+
+    .download h2{
+
+        font-size:32px;
+
+        line-height:42px;
+
+    }
+
+    .download p{
+
+        width:100%;
+
+        font-size:16px;
+
+        line-height:28px;
+
+        margin-bottom:30px;
+
+    }
+
+    .download-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:18px;
+
+    }
+
+    .download-buttons button{
+
+        width:100%;
+
+        max-width:350px;
+
+        min-width:auto;
+
+        padding:16px;
+
+        font-size:17px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .download{
+
+        padding:60px 15px;
+
+    }
+
+    .download h2{
+
+        font-size:28px;
+
+        line-height:36px;
+
+    }
+
+    .download p{
+
+        font-size:15px;
+
+        line-height:26px;
+
+    }
+
+    .download-buttons button{
+
+        font-size:16px;
+
+        padding:15px;
+
+    }
 
 }

@@ -1,4 +1,14 @@
+/* ==========================================================
+   STATS - MOBILIZA
+========================================================== */
+
 .stats{
+
+    width:100%;
+
+    background:#081820;
+
+    padding:90px 80px;
 
     display:grid;
 
@@ -6,23 +16,27 @@
 
     gap:30px;
 
-    padding:90px 80px;
-
-    background:#081820;
-
 }
+
+/* ==========================================================
+   CARD
+========================================================== */
 
 .stat-card{
 
-    background:#0d2430;
+    background:#0D2430;
 
     border-radius:24px;
 
-    padding:40px;
+    padding:40px 25px;
 
     text-align:center;
 
-    transition:.3s;
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:all .3s ease;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
 
 }
 
@@ -30,20 +44,164 @@
 
     transform:translateY(-8px);
 
+    border-color:#20D6C5;
+
+    box-shadow:0 20px 45px rgba(32,214,197,.25);
+
 }
+
+/* ==========================================================
+   NÚMERO
+========================================================== */
 
 .stat-card h2{
 
-    color:#20d6c5;
+    color:#20D6C5;
 
     font-size:42px;
+
+    font-weight:800;
 
     margin-bottom:15px;
 
 }
 
+/* ==========================================================
+   TEXTO
+========================================================== */
+
 .stat-card span{
 
-    color:white;
+    display:block;
+
+    color:#FFFFFF;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    line-height:28px;
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .stats{
+
+        padding:80px 50px;
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .stats{
+
+        padding:70px 35px;
+
+        gap:25px;
+
+    }
+
+    .stat-card{
+
+        padding:35px 20px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:36px;
+
+    }
+
+    .stat-card span{
+
+        font-size:17px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .stats{
+
+        padding:60px 20px;
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .stat-card{
+
+        padding:30px 20px;
+
+        border-radius:20px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:32px;
+
+    }
+
+    .stat-card span{
+
+        font-size:16px;
+
+        line-height:24px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .stats{
+
+        padding:50px 15px;
+
+    }
+
+    .stat-card{
+
+        padding:25px 18px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:28px;
+
+    }
+
+    .stat-card span{
+
+        font-size:15px;
+
+    }
 
 }

@@ -1,30 +1,34 @@
 /* ==========================================================
-   QUICK ACTIONS
+   QUICK ACTIONS - MOBILIZA
 ========================================================== */
 
-.quick-actions-section {
+.quick-actions-section{
 
-    background: #112533;
+    width:100%;
 
-    border-radius: 24px;
+    background:#112533;
 
-    padding: 24px;
+    border-radius:24px;
 
-    border: 1px solid rgba(255, 255, 255, .05);
+    padding:30px;
 
-    box-shadow:
+    border:1px solid rgba(255,255,255,.05);
 
-        0 15px 40px rgba(0, 0, 0, .22);
+    box-shadow:0 15px 40px rgba(0,0,0,.22);
 
 }
 
-.quick-actions-grid {
+/* ==========================================================
+   GRID
+========================================================== */
 
-    display: grid;
+.quick-actions-grid{
 
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display:grid;
 
-    gap: 22px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
 
 }
 
@@ -32,59 +36,61 @@
    CARD
 ========================================================== */
 
-.quick-card {
+.quick-card{
 
-    border: none;
+    display:flex;
 
-    background: #0D1F2B;
+    flex-direction:column;
 
-    border-radius: 22px;
+    align-items:flex-start;
 
-    padding: 20px;
+    justify-content:flex-start;
 
-    cursor: pointer;
+    text-align:left;
 
-    transition: .35s;
+    gap:10px;
 
-    display: flex;
+    padding:24px;
 
-    flex-direction: column;
+    border:none;
 
-    align-items: flex-start;
+    border-radius:22px;
 
-    text-align: left;
+    background:#0D1F2B;
 
-    color: white;
+    color:#FFFFFF;
 
-    border: 1px solid rgba(255, 255, 255, .05);
+    cursor:pointer;
 
-}
+    transition:.35s;
 
-.quick-card:hover {
-
-    transform: translateY(-8px);
-
-    background: #25D8C5;
-
-    color: #07141D;
-
-    box-shadow:
-
-        0 20px 45px rgba(37, 216, 197, .25);
+    border:1px solid rgba(255,255,255,.05);
 
 }
 
-.quick-card:hover .quick-icon {
+.quick-card:hover{
 
-    background: white;
+    transform:translateY(-8px);
 
-    color: #25D8C5;
+    background:#25D8C5;
+
+    color:#07141D;
+
+    box-shadow:0 20px 45px rgba(37,216,197,.25);
 
 }
 
-.quick-card:hover p {
+.quick-card:hover .quick-icon{
 
-    color: #10303A;
+    background:#FFFFFF;
+
+    color:#25D8C5;
+
+}
+
+.quick-card:hover p{
+
+    color:#10303A;
 
 }
 
@@ -92,29 +98,43 @@
    ÍCONE
 ========================================================== */
 
-.quick-icon {
+.quick-icon{
 
-    width: 52px;
+    width:56px;
 
-    height: 52px;
+    height:56px;
 
-    border-radius: 18px;
+    border-radius:18px;
 
-    background: #25D8C5;
+    background:#25D8C5;
 
-    color: #07141D;
+    color:#07141D;
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    justify-content:center;
 
-    align-items: center;
+    align-items:center;
 
-    font-size: 28px;
+    font-size:28px;
 
-    margin-bottom: 22px;
+    transition:.35s;
 
-    transition: .35s;
+    flex-shrink:0;
+
+}
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.quick-card h3{
+
+    margin:0;
+
+    font-size:20px;
+
+    font-weight:700;
 
 }
 
@@ -122,51 +142,161 @@
    TEXTO
 ========================================================== */
 
-.quick-card h3 {
+.quick-card p{
 
-    font-size: 20px;
+    margin:0;
 
-    margin-bottom: 10px;
+    color:#9EB4C1;
 
-    font-weight: 700;
+    font-size:14px;
 
-}
-
-.quick-card p {
-
-    color: #9EB4C1;
-
-    line-height: 24px;
-
-    font-size: 14px;
+    line-height:24px;
 
 }
 
 /* ==========================================================
-   RESPONSIVO
+   NOTEBOOK
 ========================================================== */
 
-@media(max-width:992px) {
+@media (max-width:1200px){
 
-    .quick-actions-grid {
+    .quick-actions-section{
 
-        grid-template-columns: repeat(2, 1fr);
+        padding:25px;
+
+    }
+
+    .quick-actions-grid{
+
+        grid-template-columns:repeat(2,1fr);
 
     }
 
 }
 
-@media(max-width:768px) {
+/* ==========================================================
+   TABLET
+========================================================== */
 
-    .quick-actions-grid {
+@media (max-width:992px){
 
-        grid-template-columns: 1fr;
+    .quick-actions-section{
+
+        padding:22px;
 
     }
 
-    .quick-card {
+    .quick-actions-grid{
 
-        padding: 24px;
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .quick-card{
+
+        padding:22px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .quick-actions-section{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+    .quick-actions-grid{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+    }
+
+    .quick-card{
+
+        padding:20px;
+
+        border-radius:18px;
+
+    }
+
+    .quick-icon{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:24px;
+
+    }
+
+    .quick-card h3{
+
+        font-size:18px;
+
+    }
+
+    .quick-card p{
+
+        font-size:15px;
+
+        line-height:24px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .quick-actions-section{
+
+        padding:15px;
+
+    }
+
+    .quick-card{
+
+        padding:18px;
+
+    }
+
+    .quick-icon{
+
+        width:46px;
+
+        height:46px;
+
+        font-size:22px;
+
+    }
+
+    .quick-card h3{
+
+        font-size:17px;
+
+    }
+
+    .quick-card p{
+
+        font-size:14px;
+
+        line-height:22px;
 
     }
 
