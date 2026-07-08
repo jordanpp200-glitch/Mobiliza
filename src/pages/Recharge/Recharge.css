@@ -1,416 +1,706 @@
-.recharge-page {
+/* ==========================================================
+   RECHARGE PAGE
+========================================================== */
 
-    display: flex;
+.recharge-page{
 
-    background: #08141d;
+    display:flex;
 
-    min-height: 100vh;
+    width:100%;
 
-}
+    min-height:100vh;
 
-.recharge-content {
-
-    flex: 1;
-    margin-left: 80px;
-    padding: 24px;
+    background:#08141D;
 
 }
 
-.recharge-container {
+.recharge-content{
 
-    max-width: 900px;
+    flex:1;
 
-    margin: auto;
+    margin-left:80px;
 
-}
+    padding:30px;
 
-.recharge-container h1 {
-
-    color: #fff;
-
-    margin-bottom: 25px;
+    transition:.3s;
 
 }
 
-.saldo-card {
+.recharge-container{
 
-    background: #112332;
+    width:100%;
 
-    border-radius: 18px;
+    max-width:900px;
 
-    padding: 25px;
-
-    color: #ffffff96;
-
-    margin-bottom: 25px;
+    margin:auto;
 
 }
 
-.saldo-card span {
+/* ==========================================================
+   TÍTULO
+========================================================== */
 
-    color: #8da4b4;
+.page-title{
 
-}
-
-.saldo-card h2 {
-
-    color: #2ad5cf;
-
-    margin-top: 10px;
-
-    font-size: 36px;
+    margin-bottom:30px;
 
 }
 
+.page-title h1{
+
+    color:#FFFFFF;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.page-title p{
+
+    color:#27D8CF;
+
+    font-size:16px;
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.saldo-card,
 .valor-card,
-.metodo-card {
+.metodo-card,
+.pix-card{
 
-    background: #112332;
+    background:#112332;
 
-    border-radius: 18px;
+    border-radius:20px;
 
-    padding: 25px;
+    padding:25px;
 
-    margin-bottom: 25px;
+    margin-bottom:25px;
 
-    color: white;
+    border:1px solid rgba(255,255,255,.05);
 
-}
-
-.quick-values {
-
-    display: flex;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-
-    margin: 20px 0;
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
 
 }
 
-.quick-values button {
+/* ==========================================================
+   SALDO
+========================================================== */
 
-    background: #27d8cf;
+.saldo-card{
 
-    border: none;
-
-    color: #08141d;
-
-    font-weight: bold;
-
-    padding: 12px 22px;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    transition: .3s;
+    color:#FFFFFF;
 
 }
 
-.quick-values button:hover {
+.saldo-card span{
 
-    transform: translateY(-2px);
+    color:#8EA4B4;
 
-}
-
-.valor-card input {
-
-    width: 100%;
-
-    padding: 14px;
-
-    border-radius: 10px;
-
-    border: none;
-
-    margin-top: 15px;
-
-    background: #1b2d3d;
-
-    color: white;
+    font-size:15px;
 
 }
 
-.metodo-card label {
+.saldo-card h2{
 
-    display: block;
+    margin-top:10px;
 
-    margin: 15px 0;
+    color:#27D8CF;
 
-    cursor: pointer;
+    font-size:38px;
 
-}
-
-.btn-recarregar {
-
-    width: 100%;
-
-    background: #27d8cf;
-
-    color: #08141d;
-
-    border: none;
-
-    padding: 16px;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    border-radius: 12px;
-
-    cursor: pointer;
-
-    transition: .3s;
+    font-weight:700;
 
 }
 
-.btn-recarregar:hover {
+/* ==========================================================
+   VALORES RÁPIDOS
+========================================================== */
 
-    opacity: .9;
+.quick-values{
 
-}
+    display:flex;
 
-.pix-card {
+    flex-wrap:wrap;
 
-    margin-top: 30px;
+    gap:15px;
 
-    background: #112332;
-
-    padding: 25px;
-
-    border-radius: 18px;
-
-    color: white;
+    margin:20px 0;
 
 }
 
-.pix-card textarea {
+.quick-values button{
 
-    width: 100%;
+    padding:12px 22px;
 
-    margin-top: 15px;
+    border:none;
 
-    margin-bottom: 15px;
+    border-radius:12px;
 
-    min-height: 90px;
+    background:#27D8CF;
 
-    background: #08141d;
+    color:#08141D;
 
-    color: #27d8cf;
+    font-weight:700;
 
-    border: none;
+    cursor:pointer;
 
-    padding: 15px;
-
-    border-radius: 10px;
+    transition:.3s;
 
 }
 
-.pix-card button {
+.quick-values button:hover{
 
-    width: 100%;
+    transform:translateY(-3px);
 
-    margin-top: 12px;
-
-    border: none;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
-    background: #27d8cf;
-
-    color: #08141d;
-
-    cursor: pointer;
-
-    font-weight: bold;
+    box-shadow:0 10px 25px rgba(39,216,207,.30);
 
 }
 
-.payment-form {
+/* ==========================================================
+   INPUTS
+========================================================== */
 
-    display: flex;
+.valor-card input,
+.payment-form input{
 
-    flex-direction: column;
+    width:100%;
 
-    gap: 18px;
+    height:58px;
 
-    margin-top: 25px;
+    padding:0 18px;
 
-}
+    background:#1C2B36;
 
-.payment-form input {
+    border:1px solid transparent;
 
-    height: 58px;
+    border-radius:14px;
 
-    border: none;
+    color:#FFFFFF;
 
-    background: #1c2b36;
+    font-size:16px;
 
-    border-radius: 14px;
-
-    padding: 18px;
-
-    color: rgb(10, 52, 63);
-
-    font-size: 16px;
+    transition:.3s;
 
 }
 
-.payment-form button {
+.valor-card input::placeholder,
+.payment-form input::placeholder{
 
-    height: 60px;
-
-    border: none;
-
-    background: #27d8cf;
-
-    color: #08141d;
-
-    font-weight: 700;
-
-    font-size: 25px;
-
-    border-radius: 14px;
-
-    cursor: pointer;
+    color:#8EA4B4;
 
 }
 
-.row {
+.valor-card input:focus,
+.payment-form input:focus{
 
-    display: grid;
+    border-color:#27D8CF;
 
-    grid-template-columns: 1fr 1fr;
+    outline:none;
 
-    gap: 15px;
-
-}
-
-.saved-cards {
-
-    margin-top: 30px;
+    box-shadow:0 0 15px rgba(39,216,207,.25);
 
 }
 
-.saved-card {
+/* ==========================================================
+   MÉTODO
+========================================================== */
 
-    padding: 16px;
+.metodo-card{
 
-    background: #182734;
-
-    border-radius: 14px;
-
-    margin-bottom: 15px;
-
-    cursor: pointer;
-
-    transition: .3s;
+    color:#FFFFFF;
 
 }
 
-.saved-card:hover {
+.metodo-card label{
 
-    background: #22394d;
+    display:flex;
 
-}
+    align-items:center;
 
-.saved-card strong {
+    gap:12px;
 
-    display: block;
+    margin:15px 0;
 
-    color: white;
-
-}
-
-.saved-card span {
-
-    color: #8ea3b2;
+    cursor:pointer;
 
 }
 
-.pix-card img {
+/* ==========================================================
+   BOTÃO RECARGA
+========================================================== */
 
-    width: 220px;
+.btn-recarregar{
 
-    display: block;
+    width:100%;
 
-    margin: auto;
+    height:58px;
 
-    margin-bottom: 20px;
+    border:none;
 
-}
+    border-radius:15px;
 
-.page-title {
+    background:#27D8CF;
 
-    margin-bottom: 30px;
+    color:#08141D;
 
-}
+    font-size:18px;
 
-.page-title h1 {
+    font-weight:700;
 
-    color: #fff;
+    cursor:pointer;
 
-    font-size: 42px;
-
-    margin-bottom: 8px;
-
-}
-
-.page-title p {
-
-    color: #27d8cf;
+    transition:.3s;
 
 }
 
-.selected-card {
+.btn-recarregar:hover{
 
-    margin-top: 25px;
+    transform:translateY(-2px);
 
-    background: #182734;
-
-    border-left: 5px solid #27d8cf;
-
-    padding: 18px;
-
-    border-radius: 14px;
+    box-shadow:0 12px 25px rgba(39,216,207,.30);
 
 }
 
-.selected-card h3 {
+/* ==========================================================
+   FORMULÁRIO
+========================================================== */
 
-    color: #fff;
+.payment-form{
 
-    margin-bottom: 8px;
+    display:flex;
 
-}
+    flex-direction:column;
 
-.selected-card p {
+    gap:18px;
 
-    color: #27d8cf;
-
-    font-size: 22px;
-
-    margin-bottom: 6px;
+    margin-top:25px;
 
 }
 
-.selected-card small {
+.row{
 
-    color: #1b5f92;
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
 
 }
 
-.payment-selector button.active {
+/* ==========================================================
+   CARTÕES SALVOS
+========================================================== */
 
-    background: #27d8cf;
-    border-radius: 8px;
-    color: #08141d;
-    font-size: 18px;
-    font-weight: 700;
+.saved-cards{
+
+    margin-top:30px;
+
+}
+
+.saved-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    background:#182734;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.saved-card:hover{
+
+    transform:translateY(-3px);
+
+    background:#22394D;
+
+    border-color:#27D8CF;
+
+    box-shadow:0 12px 25px rgba(39,216,207,.15);
+
+}
+
+.saved-card strong{
+
+    display:block;
+
+    color:#FFFFFF;
+
+    font-size:17px;
+
+    margin-bottom:6px;
+
+}
+
+.saved-card span{
+
+    color:#8EA4B4;
+
+    font-size:14px;
+
+}
+
+/* ==========================================================
+   CARTÃO SELECIONADO
+========================================================== */
+
+.selected-card{
+
+    margin-top:25px;
+
+    padding:20px;
+
+    background:#182734;
+
+    border-left:5px solid #27D8CF;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+.selected-card h3{
+
+    color:#FFFFFF;
+
+    margin-bottom:10px;
+
+    font-size:20px;
+
+}
+
+.selected-card p{
+
+    color:#27D8CF;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.selected-card small{
+
+    color:#8EA4B4;
+
+}
+
+/* ==========================================================
+   PIX
+========================================================== */
+
+.pix-card{
+
+    color:#FFFFFF;
+
+}
+
+.pix-card h2{
+
+    margin-bottom:20px;
+
+    font-size:26px;
+
+}
+
+.pix-card img{
+
+    width:220px;
+
+    max-width:100%;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    padding:8px;
+
+}
+
+.pix-card textarea{
+
+    width:100%;
+
+    min-height:110px;
+
+    margin:15px 0;
+
+    padding:15px;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#08141D;
+
+    color:#27D8CF;
+
+    font-size:15px;
+
+    line-height:24px;
+
+}
+
+.pix-card textarea::placeholder{
+
+    color:#7E97A6;
+
+}
+
+.pix-card button{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#27D8CF;
+
+    color:#08141D;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.pix-card button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(39,216,207,.30);
+
+}
+
+/* ==========================================================
+   SELETOR DE PAGAMENTO
+========================================================== */
+
+.payment-selector{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.payment-selector button{
+
+    flex:1;
+
+    min-width:150px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1B2D3D;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.payment-selector button:hover{
+
+    background:#22394D;
+
+}
+
+.payment-selector button.active{
+
+    background:#27D8CF;
+
+    color:#08141D;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width:1200px){
+
+    .recharge-content{
+
+        margin-left:80px;
+
+        padding:25px;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .recharge-content{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    .page-title h1{
+
+        font-size:34px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .recharge-content{
+
+        padding:15px;
+
+    }
+
+    .row{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .quick-values{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .quick-values button{
+
+        width:100%;
+
+    }
+
+    .payment-selector{
+
+        flex-direction:column;
+
+    }
+
+    .payment-selector button{
+
+        width:100%;
+
+    }
+
+    .saved-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .saldo-card h2{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .page-title h1{
+
+        font-size:28px;
+
+    }
+
+    .saldo-card,
+    .valor-card,
+    .metodo-card,
+    .pix-card{
+
+        padding:18px;
+
+    }
+
+    .quick-values{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .btn-recarregar{
+
+        font-size:16px;
+
+    }
+
+    .pix-card img{
+
+        width:180px;
+
+    }
+
+    .payment-form input{
+
+        height:52px;
+
+        font-size:15px;
+
+    }
 
 }

@@ -9,19 +9,16 @@
     font-family:"Poppins",sans-serif;
 }
 
+html,
+body,
 #root{
-
     width:100%;
-    height:100%;
-
+    min-height:100%;
 }
 
 body{
-
     overflow-x:hidden;
-
     overflow-y:auto;
-
 }
 
 /* ======================================================
@@ -35,23 +32,20 @@ body{
     width:100%;
     min-height:100vh;
 
-    overflow-x:hidden;
-    overflow-y:auto;
-
-    background-image:url("/images/login-banner.png");
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-
     display:flex;
     justify-content:center;
     align-items:center;
 
     padding:30px;
+
+    overflow:hidden;
+
+    background:url("/images/login-banner.png") center/cover no-repeat;
+
 }
 
 /* ======================================================
-   ESCURECIMENTO DA IMAGEM
+   OVERLAY
 ====================================================== */
 
 .overlay{
@@ -61,11 +55,8 @@ body{
     inset:0;
 
     background:linear-gradient(
-
         rgba(4,16,25,.30),
-
-        rgba(4,16,25,.55)
-
+        rgba(4,16,25,.60)
     );
 
 }
@@ -78,9 +69,8 @@ body{
 
     position:absolute;
 
-    top:80px;
-
-    left:70px;
+    top:65px;
+    left:65px;
 
     z-index:10;
 
@@ -88,23 +78,23 @@ body{
 
     align-items:center;
 
-    gap:22px;
+    gap:20px;
 
 }
 
 .brand-icon{
 
-    font-size:68px;
+    font-size:62px;
 
-    color:#2bd8d5;
+    color:#2BD8D5;
 
 }
 
 .brand h1{
 
-    color:white;
+    color:#FFF;
 
-    font-size:74px;
+    font-size:66px;
 
     font-weight:800;
 
@@ -116,13 +106,13 @@ body{
 
     display:block;
 
-    margin-top:10px;
+    margin-top:8px;
 
-    color:white;
+    color:#FFF;
 
-    font-size:18px;
+    font-size:16px;
 
-    letter-spacing:5px;
+    letter-spacing:4px;
 
 }
 
@@ -140,37 +130,30 @@ body{
 
     transform:translateY(-50%);
 
-    width:420px;
+    width:100%;
+    max-width:420px;
 
-    min-height:590px;
+    padding:35px;
 
-    padding:42px;
+    border-radius:28px;
 
-    border-radius:30px;
-
-    background:rgba(9,22,35,.72);
+    background:rgba(9,22,35,.75);
 
     -webkit-backdrop-filter:blur(18px);
-
     backdrop-filter:blur(18px);
 
     border:1px solid rgba(255,255,255,.08);
 
-    box-shadow:
+    box-shadow:0 35px 70px rgba(0,0,0,.45);
 
-        0 35px 70px rgba(0,0,0,.45);
+    display:flex;
+    flex-direction:column;
 
     z-index:20;
 
-    display:flex;
-
-    flex-direction:column;
+    animation:loginFade .8s ease;
 
 }
-
-/* ======================================================
-   BRILHO DO CARD
-====================================================== */
 
 .login-card::before{
 
@@ -180,14 +163,11 @@ body{
 
     inset:0;
 
-    border-radius:30px;
+    border-radius:28px;
 
     background:linear-gradient(
-
         rgba(255,255,255,.04),
-
         rgba(255,255,255,.01)
-
     );
 
     pointer-events:none;
@@ -202,20 +182,16 @@ body{
 
     text-align:center;
 
-    color:#fff;
+    color:#FFF;
 
-    font-size:58px;
+    font-size:48px;
 
-    font-weight:800;
-
-    line-height:1.05;
-
-    margin-bottom:40px;
+    margin-bottom:30px;
 
 }
 
 /* ======================================================
-   FORMULÁRIO
+   FORM
 ====================================================== */
 
 .login-card form{
@@ -224,24 +200,20 @@ body{
 
     flex-direction:column;
 
-    flex:1;
-
 }
 
 .login-card label{
 
-    color:#ffffff;
+    color:#FFF;
 
-    font-size:18px;
+    font-size:16px;
 
-    font-weight:600;
-
-    margin-bottom:12px;
+    margin-bottom:8px;
 
 }
 
 /* ======================================================
-   LINHA SENHA
+   SENHA
 ====================================================== */
 
 .senha-topo{
@@ -252,77 +224,68 @@ body{
 
     align-items:center;
 
-    margin-bottom:12px;
+    margin-bottom:8px;
 
 }
 
 .senha-topo a{
 
-    color:#2bd8d5;
+    color:#2BD8D5;
 
     text-decoration:none;
 
-    font-size:15px;
-
-    transition:.25s;
+    font-size:14px;
 
 }
 
 .senha-topo a:hover{
 
-    color:white;
+    color:#FFF;
 
 }
 
 /* ======================================================
-   INPUTS
+   INPUT
 ====================================================== */
 
 .input-box{
-
-    width:100%;
-
-    height:64px;
 
     display:flex;
 
     align-items:center;
 
-    gap:16px;
+    gap:15px;
+
+    width:100%;
+
+    height:58px;
 
     padding:0 20px;
 
-    margin-bottom:26px;
+    margin-bottom:18px;
 
-    border-radius:18px;
+    border-radius:15px;
 
-    border:1.5px solid #2bd8d5;
+    border:1.5px solid #2BD8D5;
 
     background:rgba(255,255,255,.05);
 
-    transition:.35s;
+    transition:.3s;
 
 }
 
-.input-box:hover{
-
-    border-color:#4dffff;
-
-}
-
+.input-box:hover,
 .input-box:focus-within{
 
-    border-color:#4dffff;
+    border-color:#4DFFFF;
 
-    box-shadow:
-
-        0 0 25px rgba(43,216,213,.35);
+    box-shadow:0 0 20px rgba(43,216,213,.30);
 
 }
 
 .input-box svg{
 
-    color:#2bd8d5;
+    color:#2BD8D5;
 
     font-size:20px;
 
@@ -332,28 +295,26 @@ body{
 
     flex:1;
 
-    height:100%;
-
     border:none;
 
     outline:none;
 
-    background:transparent;
+    background:none;
 
-    color:white;
+    color:#FFF;
 
-    font-size:18px;
+    font-size:17px;
 
 }
 
 .input-box input::placeholder{
 
-    color:#9da6af;
+    color:#9DA6AF;
 
 }
 
 /* ======================================================
-   OLHO DA SENHA
+   OLHO
 ====================================================== */
 
 .eye{
@@ -362,31 +323,25 @@ body{
 
     background:none;
 
+    color:#BDBDBD;
+
     cursor:pointer;
-
-    color:#bdbdbd;
-
-    font-size:20px;
-
-    transition:.3s;
 
 }
 
 .eye:hover{
 
-    color:white;
+    color:#FFF;
 
 }
 
 /* ======================================================
-   LEMBRAR SENHA
+   CHECKBOX
 ====================================================== */
 
 .remember{
 
-    margin-top:5px;
-
-    margin-bottom:30px;
+    margin-bottom:22px;
 
 }
 
@@ -398,21 +353,15 @@ body{
 
     gap:10px;
 
-    cursor:pointer;
+    color:#FFF;
 
-    font-size:17px;
-
-    color:white;
+    font-size:15px;
 
 }
 
 .remember input{
 
-    width:18px;
-
-    height:18px;
-
-    accent-color:#2bd8d5;
+    accent-color:#2BD8D5;
 
 }
 
@@ -424,43 +373,33 @@ body{
 
     width:100%;
 
-    height:60px;
+    height:56px;
 
     border:none;
 
-    border-radius:18px;
+    border-radius:15px;
 
-    background:#2fd8d6;
+    background:#2FD8D6;
 
-    color:#07141d;
+    color:#07141D;
 
-    font-size:22px;
+    font-size:20px;
 
     font-weight:700;
 
     cursor:pointer;
 
-    transition:.35s;
+    transition:.3s;
 
 }
 
 .btn-login:hover{
 
-    background:#4ff4f1;
+    background:#4FF4F1;
 
     transform:translateY(-2px);
 
-    box-shadow:
-
-        0 15px 30px rgba(47,216,214,.40);
-
-}
-
-.btn-login:disabled{
-
-    opacity:.8;
-
-    cursor:not-allowed;
+    box-shadow:0 15px 30px rgba(47,216,214,.40);
 
 }
 
@@ -470,43 +409,35 @@ body{
 
 .register{
 
-    margin-top:32px;
+    margin-top:22px;
 
     text-align:center;
 
-    color:#d7d7d7;
+    color:#D7D7D7;
 
-    font-size:17px;
+    font-size:15px;
 
 }
 
 .register a{
 
-    margin-left:8px;
-
-    color:#2fd8d6;
-
-    text-decoration:none;
+    color:#2FD8D6;
 
     font-weight:700;
+
+    text-decoration:none;
 
 }
 
 .register a:hover{
 
-    color:white;
+    color:#FFF;
 
 }
 
 /* ======================================================
-   ACABAMENTO PREMIUM
+   ANIMAÇÃO
 ====================================================== */
-
-.login-card{
-
-    animation:loginFade .8s ease;
-
-}
 
 @keyframes loginFade{
 
@@ -514,7 +445,7 @@ body{
 
         opacity:0;
 
-        transform:translateY(-50%) translateX(50px);
+        transform:translateY(-50%) translateX(40px);
 
     }
 
@@ -529,172 +460,10 @@ body{
 }
 
 /* ======================================================
-   CARD MAIS COMPACTO
-====================================================== */
-
-/* Substitui as propriedades do card */
-
-.login-card{
-
-    width:420px;
-
-    min-height:590px;
-
-    padding:35px 38px;
-
-    border-radius:28px;
-
-}
-
-/* ======================================================
-   TÍTULO MENOR
-====================================================== */
-
-.login-card h2{
-
-    font-size:48px;
-
-    margin-bottom:28px;
-
-}
-
-/* ======================================================
-   LABELS
-====================================================== */
-
-.login-card label{
-
-    font-size:16px;
-
-    margin-bottom:8px;
-
-}
-
-/* ======================================================
-   INPUTS MENORES
-====================================================== */
-
-.input-box{
-
-    height:58px;
-
-    margin-bottom:18px;
-
-    border-radius:15px;
-
-}
-
-.input-box input{
-
-    font-size:17px;
-
-}
-
-/* ======================================================
-   LINHA DA SENHA
-====================================================== */
-
-.senha-topo{
-
-    margin-bottom:8px;
-
-}
-
-.senha-topo a{
-
-    font-size:14px;
-
-}
-
-/* ======================================================
-   LEMBRAR SENHA
-====================================================== */
-
-.remember{
-
-    margin-top:0;
-
-    margin-bottom:22px;
-
-}
-
-.remember label{
-
-    font-size:15px;
-
-}
-
-/* ======================================================
-   BOTÃO
-====================================================== */
-
-.btn-login{
-
-    height:56px;
-
-    border-radius:15px;
-
-    font-size:20px;
-
-}
-
-/* ======================================================
-   CADASTRO
-====================================================== */
-
-.register{
-
-    margin-top:22px;
-
-    font-size:15px;
-
-}
-
-/* ======================================================
-   LOGO
-====================================================== */
-
-.brand{
-
-    top:65px;
-
-    left:65px;
-
-}
-
-.brand-icon{
-
-    font-size:62px;
-
-}
-
-.brand h1{
-
-    font-size:66px;
-
-}
-
-.brand span{
-
-    font-size:16px;
-
-}
-
-/* ======================================================
    RESPONSIVO
 ====================================================== */
 
-@media(max-width:1200px){
-
-    .login-card{
-
-        right:60px;
-
-    }
-
-}
-
-@media(max-width:992px){
+@media (max-width:992px){
 
     .brand{
 
@@ -706,9 +475,8 @@ body{
 
         position:relative;
 
-        right:auto;
-
         top:auto;
+        right:auto;
 
         transform:none;
 
@@ -720,36 +488,24 @@ body{
 
 @media (max-width:768px){
 
-    .brand{
-        display:none;
-    }
-
     .login-page{
+
         padding:20px;
+
     }
 
     .login-card{
 
-        position:relative;
-
-        right:auto;
-        top:auto;
-
-        transform:none;
-
-        width:100%;
-        max-width:420px;
-
-        min-height:0;
+        max-width:100%;
 
         padding:30px 25px;
-
-        margin:auto;
 
     }
 
     .login-card h2{
+
         font-size:34px;
+
     }
 
 }
@@ -757,12 +513,12 @@ body{
 @media (max-width:480px){
 
     .login-page{
+
         padding:15px;
+
     }
 
     .login-card{
-
-        width:100%;
 
         padding:25px 20px;
 
@@ -771,7 +527,9 @@ body{
     }
 
     .login-card h2{
+
         font-size:30px;
+
     }
 
     .input-box{
@@ -780,23 +538,11 @@ body{
 
     }
 
-    .input-box input{
-
-        font-size:15px;
-
-    }
-
     .btn-login{
 
         height:50px;
 
         font-size:18px;
-
-    }
-
-    .register{
-
-        font-size:14px;
 
     }
 

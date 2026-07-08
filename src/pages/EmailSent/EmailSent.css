@@ -1,3 +1,7 @@
+/* ==========================================================
+   EMAIL SENT - MOBILIZA
+========================================================== */
+
 .email-page{
 
     width:100%;
@@ -10,74 +14,292 @@
 
     align-items:center;
 
+    padding:40px 20px;
+
     background:#07141D;
 
 }
 
+/* ==========================================================
+   CARD
+========================================================== */
+
 .email-card{
 
-    width:500px;
+    width:100%;
+
+    max-width:520px;
 
     background:#10232E;
 
-    border-radius:25px;
+    border-radius:28px;
 
     padding:50px;
 
     text-align:center;
 
+    border:1px solid rgba(255,255,255,.05);
+
     box-shadow:0 20px 60px rgba(0,0,0,.35);
 
+    transition:.35s;
+
 }
+
+.email-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 65px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================================
+   ÍCONE
+========================================================== */
 
 .email-icon{
 
-    font-size:70px;
+    font-size:72px;
+
+    color:#25D8C5;
+
+    margin-bottom:25px;
 
 }
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
 
 .email-card h1{
 
-    color:white;
+    color:#FFFFFF;
 
-    margin-top:20px;
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
 
 }
+
+/* ==========================================================
+   TEXTO
+========================================================== */
 
 .email-card p{
 
-    color:#c6d0d5;
+    color:#C6D0D5;
+
+    font-size:17px;
 
     line-height:30px;
 
+    margin-bottom:20px;
+
 }
 
-.email-card strong{
+/* ==========================================================
+   EMAIL
+========================================================== */
 
-    color:#25D8C5;
+.email-card strong{
 
     display:block;
 
     margin:25px 0;
 
+    color:#25D8C5;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    word-break:break-word;
+
 }
+
+/* ==========================================================
+   BOTÃO
+========================================================== */
 
 .email-card button{
 
     width:100%;
 
-    height:60px;
+    height:58px;
 
     border:none;
 
-    border-radius:15px;
+    border-radius:16px;
 
     background:#25D8C5;
 
     color:#07141D;
 
-    font-weight:bold;
+    font-size:17px;
+
+    font-weight:700;
 
     cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.email-card button:hover{
+
+    background:#3EF0DE;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(37,216,197,.35);
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .email-card{
+
+        max-width:500px;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .email-page{
+
+        padding:30px 20px;
+
+    }
+
+    .email-card{
+
+        padding:40px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .email-page{
+
+        padding:20px;
+
+    }
+
+    .email-card{
+
+        padding:30px 25px;
+
+        border-radius:22px;
+
+    }
+
+    .email-icon{
+
+        font-size:60px;
+
+    }
+
+    .email-card h1{
+
+        font-size:28px;
+
+    }
+
+    .email-card p{
+
+        font-size:16px;
+
+        line-height:28px;
+
+    }
+
+    .email-card strong{
+
+        font-size:17px;
+
+    }
+
+    .email-card button{
+
+        height:54px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .email-page{
+
+        padding:15px;
+
+    }
+
+    .email-card{
+
+        padding:25px 20px;
+
+        border-radius:20px;
+
+    }
+
+    .email-icon{
+
+        font-size:52px;
+
+    }
+
+    .email-card h1{
+
+        font-size:24px;
+
+    }
+
+    .email-card p{
+
+        font-size:15px;
+
+        line-height:26px;
+
+    }
+
+    .email-card strong{
+
+        font-size:16px;
+
+    }
+
+    .email-card button{
+
+        height:50px;
+
+        font-size:15px;
+
+    }
 
 }

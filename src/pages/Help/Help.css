@@ -1,55 +1,331 @@
+/* ==========================================================
+   HELP PAGE - MOBILIZA
+========================================================== */
+
 .help-page{
 
-    display:flex;
+    width:100%;
 
     min-height:100vh;
 
-    background:#08141d;
+    display:flex;
+
+    background:#08141D;
 
 }
+
+/* ==========================================================
+   CONTEÚDO
+========================================================== */
 
 .help-content{
 
     flex:1;
 
+    width:100%;
+
 }
 
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
 .help-container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
 
     padding:35px;
 
 }
 
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
 .help-container h1{
 
-    color:white;
+    color:#FFFFFF;
 
-    margin-bottom:25px;
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:30px;
 
 }
+
+/* ==========================================================
+   CARD
+========================================================== */
 
 .help-card{
 
     background:#122534;
 
-    color:white;
+    border:1px solid rgba(255,255,255,.05);
 
-    padding:25px;
+    border-radius:20px;
 
-    border-radius:18px;
+    padding:28px;
 
-    margin-bottom:20px;
+    margin-bottom:22px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+    transition:.3s;
 
 }
 
+.help-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#25D8C5;
+
+    box-shadow:0 18px 40px rgba(37,216,197,.18);
+
+}
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
+.help-card h2{
+
+    color:#25D8C5;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.help-card h3{
+
+    color:#FFFFFF;
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================================
+   TEXTO
+========================================================== */
+
+.help-card p{
+
+    color:#D5E0E5;
+
+    font-size:16px;
+
+    line-height:30px;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================================
+   LISTA
+========================================================== */
+
 .help-card ul{
 
-    margin-left:20px;
+    margin-left:22px;
 
 }
 
 .help-card li{
 
+    color:#D5E0E5;
+
+    font-size:16px;
+
+    line-height:28px;
+
     margin:10px 0;
+
+}
+
+.help-card li::marker{
+
+    color:#25D8C5;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.help-card a{
+
+    color:#25D8C5;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.help-card a:hover{
+
+    color:#45F5E6;
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .help-container{
+
+        padding:30px;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .help-container{
+
+        padding:25px;
+
+    }
+
+    .help-container h1{
+
+        font-size:30px;
+
+    }
+
+    .help-card{
+
+        padding:24px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .help-container{
+
+        padding:20px;
+
+    }
+
+    .help-container h1{
+
+        font-size:26px;
+
+    }
+
+    .help-card{
+
+        padding:20px;
+
+        border-radius:18px;
+
+    }
+
+    .help-card h2{
+
+        font-size:22px;
+
+    }
+
+    .help-card h3{
+
+        font-size:18px;
+
+    }
+
+    .help-card p{
+
+        font-size:15px;
+
+        line-height:26px;
+
+    }
+
+    .help-card li{
+
+        font-size:15px;
+
+        line-height:26px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .help-container{
+
+        padding:15px;
+
+    }
+
+    .help-container h1{
+
+        font-size:24px;
+
+    }
+
+    .help-card{
+
+        padding:18px;
+
+    }
+
+    .help-card h2{
+
+        font-size:20px;
+
+    }
+
+    .help-card h3{
+
+        font-size:17px;
+
+    }
+
+    .help-card p{
+
+        font-size:14px;
+
+        line-height:24px;
+
+    }
+
+    .help-card li{
+
+        font-size:14px;
+
+        line-height:24px;
+
+    }
 
 }

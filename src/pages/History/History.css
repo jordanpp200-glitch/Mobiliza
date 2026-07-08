@@ -1,14 +1,22 @@
+/* ==========================================================
+   HISTORY PAGE - MOBILIZA
+========================================================== */
+
 .history-page{
 
     width:100%;
 
     min-height:100vh;
 
-    background:#08141d;
+    background:#08141D;
 
     padding:35px;
 
 }
+
+/* ==========================================================
+   HEADER
+========================================================== */
 
 .history-header{
 
@@ -18,25 +26,31 @@
 
     gap:15px;
 
-    color:white;
-
     margin-bottom:35px;
 
 }
 
 .history-header svg{
 
-    color:#2bd7cf;
+    color:#2BD7CF;
 
-    font-size:32px;
+    font-size:34px;
 
 }
 
 .history-header h1{
 
-    font-size:40px;
+    color:#FFFFFF;
+
+    font-size:38px;
+
+    font-weight:700;
 
 }
+
+/* ==========================================================
+   LISTA
+========================================================== */
 
 .history-list{
 
@@ -48,13 +62,11 @@
 
 }
 
+/* ==========================================================
+   CARD
+========================================================== */
+
 .history-card{
-
-    background:#112332;
-
-    border-radius:18px;
-
-    padding:22px;
 
     display:flex;
 
@@ -62,17 +74,33 @@
 
     justify-content:space-between;
 
-    transition:.3s;
+    gap:20px;
+
+    padding:22px;
+
+    background:#112332;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    transition:.35s;
 
 }
 
 .history-card:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    border-color:#2BD7CF;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
 
 }
+
+/* ==========================================================
+   ÍCONE
+========================================================== */
 
 .history-icon{
 
@@ -80,53 +108,67 @@
 
     height:60px;
 
+    flex-shrink:0;
+
     border-radius:50%;
 
-    background:#27d8cf;
+    background:#2BD7CF;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
 }
 
 .history-icon svg{
 
-    color:#08141d;
+    color:#08141D;
 
-    font-size:24px;
+    font-size:26px;
 
 }
+
+/* ==========================================================
+   INFORMAÇÕES
+========================================================== */
 
 .history-info{
 
     flex:1;
 
-    margin-left:20px;
-
 }
 
 .history-info h3{
 
-    color:white;
+    color:#FFFFFF;
 
     font-size:22px;
 
     margin-bottom:8px;
 
+    font-weight:600;
+
 }
 
 .history-info span{
 
-    color:#95a8b8;
+    color:#95A8B8;
+
+    font-size:15px;
 
 }
+
+/* ==========================================================
+   VALOR
+========================================================== */
 
 .history-value{
 
     text-align:right;
+
+    min-width:120px;
 
 }
 
@@ -134,17 +176,27 @@
 
     display:block;
 
-    color:#2bd7cf;
+    color:#2BD7CF;
 
     font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:5px;
 
 }
 
 .history-value small{
 
-    color:#b7c7d3;
+    color:#B7C7D3;
+
+    font-size:14px;
 
 }
+
+/* ==========================================================
+   HISTÓRICO VAZIO
+========================================================== */
 
 .history-empty{
 
@@ -154,11 +206,13 @@
 
     flex-direction:column;
 
-    align-items:center;
-
     justify-content:center;
 
-    color:#8fa6b8;
+    align-items:center;
+
+    text-align:center;
+
+    color:#8FA6B8;
 
 }
 
@@ -166,7 +220,7 @@
 
     font-size:80px;
 
-    color:#2bd7cf;
+    color:#2BD7CF;
 
     margin-bottom:20px;
 
@@ -174,6 +228,234 @@
 
 .history-empty h2{
 
-    font-weight:500;
+    color:#FFFFFF;
+
+    font-size:28px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+.history-empty p{
+
+    max-width:500px;
+
+    color:#95A8B8;
+
+    line-height:28px;
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .history-page{
+
+        padding:30px;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .history-page{
+
+        padding:25px;
+
+    }
+
+    .history-header h1{
+
+        font-size:32px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .history-page{
+
+        padding:20px;
+
+    }
+
+    .history-header{
+
+        margin-bottom:25px;
+
+    }
+
+    .history-header h1{
+
+        font-size:28px;
+
+    }
+
+    .history-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+        padding:20px;
+
+    }
+
+    .history-info{
+
+        width:100%;
+
+    }
+
+    .history-info h3{
+
+        font-size:20px;
+
+    }
+
+    .history-value{
+
+        width:100%;
+
+        text-align:left;
+
+    }
+
+    .history-value strong{
+
+        font-size:22px;
+
+    }
+
+    .history-empty{
+
+        margin-top:50px;
+
+    }
+
+    .history-empty svg{
+
+        font-size:65px;
+
+    }
+
+    .history-empty h2{
+
+        font-size:24px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .history-page{
+
+        padding:15px;
+
+    }
+
+    .history-header{
+
+        gap:10px;
+
+    }
+
+    .history-header svg{
+
+        font-size:28px;
+
+    }
+
+    .history-header h1{
+
+        font-size:24px;
+
+    }
+
+    .history-card{
+
+        padding:18px;
+
+    }
+
+    .history-icon{
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+    .history-icon svg{
+
+        font-size:22px;
+
+    }
+
+    .history-info h3{
+
+        font-size:18px;
+
+    }
+
+    .history-info span{
+
+        font-size:14px;
+
+    }
+
+    .history-value strong{
+
+        font-size:20px;
+
+    }
+
+    .history-value small{
+
+        font-size:13px;
+
+    }
+
+    .history-empty svg{
+
+        font-size:55px;
+
+    }
+
+    .history-empty h2{
+
+        font-size:22px;
+
+    }
+
+    .history-empty p{
+
+        font-size:15px;
+
+        line-height:24px;
+
+    }
 
 }

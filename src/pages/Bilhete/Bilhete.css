@@ -1,8 +1,18 @@
+/* ==========================================================
+   BILHETE - MOBILIZA
+========================================================== */
+
 .bilhete-page{
+
+    width:100%;
 
     padding:35px;
 
 }
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
 
 .bilhete-page h1{
 
@@ -10,17 +20,27 @@
 
     color:#07141D;
 
+    font-size:34px;
+
+    font-weight:700;
+
 }
 
+/* ==========================================================
+   CARD PRINCIPAL
+========================================================== */
+
 .bilhete-card{
+
+    width:100%;
 
     display:grid;
 
     grid-template-columns:420px 1fr;
 
-    gap:40px;
+    gap:35px;
 
-    background:white;
+    background:#FFFFFF;
 
     border-radius:22px;
 
@@ -30,9 +50,15 @@
 
 }
 
+/* ==========================================================
+   IMAGEM DO BILHETE
+========================================================== */
+
 .bilhete-image{
 
-    height:250px;
+    width:100%;
+
+    min-height:260px;
 
     border-radius:22px;
 
@@ -42,7 +68,13 @@
 
     background-position:center;
 
+    background-repeat:no-repeat;
+
 }
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
 
 .bilhete-overlay{
 
@@ -50,9 +82,7 @@
 
     height:100%;
 
-    background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.6));
-
-    color:white;
+    padding:25px;
 
     display:flex;
 
@@ -60,31 +90,44 @@
 
     justify-content:space-between;
 
-    padding:25px;
+    background:linear-gradient(
+        rgba(0,0,0,.20),
+        rgba(0,0,0,.60)
+    );
+
+    color:#FFFFFF;
 
 }
 
 .bilhete-overlay h2{
 
-    font-size:36px;
+    font-size:34px;
+
+    font-weight:700;
 
 }
 
 .bilhete-overlay h3{
 
-    font-size:26px;
+    font-size:24px;
 
     letter-spacing:3px;
 
+    font-weight:600;
+
 }
+
+/* ==========================================================
+   INFORMAÇÕES
+========================================================== */
 
 .bilhete-info{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 
-    gap:25px;
+    gap:20px;
 
 }
 
@@ -92,9 +135,19 @@
 
     background:#F4F7FA;
 
-    padding:20px;
-
     border-radius:18px;
+
+    padding:22px;
+
+    transition:.3s;
+
+}
+
+.info-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
 
@@ -102,25 +155,33 @@
 
     display:block;
 
-    color:#888;
+    color:#7B8794;
 
-    margin-bottom:8px;
+    font-size:14px;
+
+    margin-bottom:10px;
 
 }
 
 .info-item strong{
 
+    color:#07141D;
+
     font-size:22px;
 
-    color:#07141D;
+    font-weight:700;
 
 }
 
+/* ==========================================================
+   QR CODE
+========================================================== */
+
 .qr-area{
 
-    margin-top:40px;
+    margin-top:35px;
 
-    background:white;
+    background:#FFFFFF;
 
     border-radius:22px;
 
@@ -132,31 +193,53 @@
 
 }
 
+.qr-area h2{
+
+    color:#07141D;
+
+    margin-bottom:10px;
+
+}
+
+.qr-area p{
+
+    color:#6E7B87;
+
+}
+
 .qr-area img{
 
     width:220px;
+
+    max-width:100%;
 
     margin-top:20px;
 
 }
 
+/* ==========================================================
+   BOTÃO
+========================================================== */
+
 .btn-atualizar{
 
     margin-top:30px;
 
-    background:#1ED5C2;
-
-    color:white;
+    padding:15px 35px;
 
     border:none;
 
-    padding:15px 35px;
-
     border-radius:15px;
 
-    cursor:pointer;
+    background:#1ED5C2;
+
+    color:#FFFFFF;
 
     font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
 
     transition:.3s;
 
@@ -166,6 +249,228 @@
 
     transform:translateY(-3px);
 
+    background:#18C4B2;
+
     box-shadow:0 10px 25px rgba(30,213,194,.35);
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .bilhete-card{
+
+        grid-template-columns:350px 1fr;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .bilhete-page{
+
+        padding:25px;
+
+    }
+
+    .bilhete-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .bilhete-image{
+
+        min-height:240px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .bilhete-page{
+
+        padding:18px;
+
+    }
+
+    .bilhete-page h1{
+
+        font-size:28px;
+
+    }
+
+    .bilhete-card{
+
+        padding:20px;
+
+        border-radius:18px;
+
+        gap:20px;
+
+    }
+
+    .bilhete-image{
+
+        min-height:220px;
+
+        border-radius:18px;
+
+    }
+
+    .bilhete-overlay{
+
+        padding:20px;
+
+    }
+
+    .bilhete-overlay h2{
+
+        font-size:28px;
+
+    }
+
+    .bilhete-overlay h3{
+
+        font-size:20px;
+
+    }
+
+    .bilhete-info{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+    .info-item{
+
+        padding:18px;
+
+    }
+
+    .info-item strong{
+
+        font-size:18px;
+
+    }
+
+    .qr-area{
+
+        padding:20px;
+
+        border-radius:18px;
+
+    }
+
+    .qr-area img{
+
+        width:180px;
+
+    }
+
+    .btn-atualizar{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .bilhete-page{
+
+        padding:15px;
+
+    }
+
+    .bilhete-page h1{
+
+        font-size:24px;
+
+    }
+
+    .bilhete-card{
+
+        padding:15px;
+
+    }
+
+    .bilhete-image{
+
+        min-height:180px;
+
+    }
+
+    .bilhete-overlay h2{
+
+        font-size:24px;
+
+    }
+
+    .bilhete-overlay h3{
+
+        font-size:18px;
+
+        letter-spacing:2px;
+
+    }
+
+    .info-item{
+
+        padding:15px;
+
+    }
+
+    .info-item span{
+
+        font-size:13px;
+
+    }
+
+    .info-item strong{
+
+        font-size:17px;
+
+    }
+
+    .qr-area{
+
+        padding:18px;
+
+    }
+
+    .qr-area img{
+
+        width:150px;
+
+    }
+
+    .btn-atualizar{
+
+        padding:14px;
+
+        font-size:16px;
+
+    }
 
 }

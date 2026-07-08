@@ -1,26 +1,48 @@
 /* ==========================================================
-   STORE
+   STORE - MOBILIZA
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* ==========================================================
+   PÁGINA
 ========================================================== */
 
 .store{
 
-    padding:40px;
+    width:100%;
 
     min-height:100vh;
 
+    padding:40px;
+
     background:#07141D;
 
-    color:white;
+    color:#FFFFFF;
 
 }
 
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
 .store h1{
 
-    font-size:34px;
-
-    margin-bottom:35px;
+    font-size:42px;
 
     font-weight:700;
+
+    margin-bottom:35px;
 
 }
 
@@ -32,7 +54,7 @@
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
     gap:30px;
 
@@ -50,11 +72,11 @@
 
     overflow:hidden;
 
-    transition:.35s;
+    border:1px solid rgba(255,255,255,.05);
 
     box-shadow:0 12px 30px rgba(0,0,0,.30);
 
-    border:1px solid rgba(255,255,255,.05);
+    transition:.35s;
 
 }
 
@@ -62,7 +84,9 @@
 
     transform:translateY(-8px);
 
-    box-shadow:0 25px 45px rgba(37,216,197,.25);
+    border-color:#25D8C5;
+
+    box-shadow:0 20px 45px rgba(37,216,197,.25);
 
 }
 
@@ -74,13 +98,13 @@
 
     width:100%;
 
-    height:180px;
+    height:220px;
 
     object-fit:cover;
 
     display:block;
 
-    transition:.4s;
+    transition:.35s;
 
 }
 
@@ -96,13 +120,17 @@
 
 .skin-info{
 
-    padding:20px;
+    padding:22px;
 
 }
 
 .skin-info h3{
 
-    font-size:22px;
+    color:#FFFFFF;
+
+    font-size:24px;
+
+    font-weight:700;
 
     margin-bottom:10px;
 
@@ -116,13 +144,82 @@
 
     margin-top:12px;
 
+    min-height:72px;
+
     color:#B8C4CC;
 
-    font-size:14px;
+    font-size:15px;
 
-    line-height:22px;
+    line-height:26px;
 
-    min-height:45px;
+}
+
+/* ==========================================================
+   BADGE DE RARIDADE
+========================================================== */
+
+.raridade{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:6px 14px;
+
+    margin-top:15px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+.raridade.comum{
+
+    background:#1ABC9C;
+
+    color:#FFFFFF;
+
+}
+
+.raridade.rara{
+
+    background:#2196F3;
+
+    color:#FFFFFF;
+
+}
+
+.raridade.epica{
+
+    background:#8E44AD;
+
+    color:#FFFFFF;
+
+}
+
+.raridade.lendaria,
+.raridade.lendária{
+
+    background:#F39C12;
+
+    color:#FFFFFF;
+
+}
+
+.raridade.exclusiva{
+
+    background:#E91E63;
+
+    color:#FFFFFF;
 
 }
 
@@ -138,7 +235,9 @@
 
     align-items:center;
 
-    margin-top:20px;
+    gap:15px;
+
+    margin-top:25px;
 
 }
 
@@ -148,115 +247,228 @@
 
     font-size:22px;
 
+    font-weight:700;
+
 }
+
+/* ==========================================================
+   BOTÃO
+========================================================== */
 
 .skin-footer button{
 
+    min-width:120px;
+
+    height:46px;
+
     border:none;
 
-    padding:12px 22px;
-
     border-radius:12px;
-
-    cursor:pointer;
 
     background:#25D8C5;
 
     color:#07141D;
 
-    font-weight:bold;
+    font-size:15px;
 
-    transition:.3s;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.30s;
 
 }
 
 .skin-footer button:hover{
 
-    background:#37F0DD;
+    background:#47F3E3;
 
-    transform:scale(1.05);
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(37,216,197,.30);
+
+}
+
+.skin-footer button:active{
+
+    transform:scale(.98);
 
 }
 
 /* ==========================================================
-   BADGES
+   NOTEBOOK
 ========================================================== */
 
-.raridade{
+@media (max-width:1200px){
 
-    display:inline-block;
+    .store{
 
-    padding:6px 12px;
+        padding:30px;
 
-    border-radius:25px;
-
-    margin-top:8px;
-
-    font-size:12px;
-
-    font-weight:bold;
-
-    text-transform:uppercase;
-
-}
-
-.raridade.comum{
-
-    background:#1ABC9C;
-
-}
-
-.raridade.rara{
-
-    background:#2196F3;
-
-}
-
-.raridade.epica{
-
-    background:#8E44AD;
-
-}
-
-.raridade.lendária,
-.raridade.lendaria{
-
-    background:#F39C12;
-
-}
-
-.raridade.exclusiva{
-
-    background:#E91E63;
+    }
 
 }
 
 /* ==========================================================
-   RESPONSIVO
+   TABLET
 ========================================================== */
 
-@media(max-width:900px){
+@media (max-width:992px){
 
-.store{
+    .store{
 
-padding:25px;
+        padding:25px;
+
+    }
+
+    .store h1{
+
+        font-size:36px;
+
+    }
+
+    .skins-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .store{
+
+        padding:20px;
+
+    }
+
+    .store h1{
+
+        font-size:30px;
+
+        text-align:center;
+
+    }
+
+    .skins-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .skin-image{
+
+        height:190px;
+
+    }
+
+    .skin-info{
+
+        padding:20px;
+
+    }
+
+    .skin-info h3{
+
+        font-size:22px;
+
+    }
+
+    .descricao{
+
+        min-height:0;
+
+        font-size:14px;
+
+        line-height:24px;
+
+    }
+
+    .skin-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .skin-footer button{
+
+        width:100%;
+
+    }
 
 }
 
-}
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
 
-@media(max-width:650px){
+@media (max-width:480px){
 
-.skins-grid{
+    .store{
 
-grid-template-columns:1fr;
+        padding:15px;
 
-}
+    }
 
-.store h1{
+    .store h1{
 
-font-size:28px;
+        font-size:26px;
 
-}
+    }
+
+    .skin-card{
+
+        border-radius:18px;
+
+    }
+
+    .skin-image{
+
+        height:170px;
+
+    }
+
+    .skin-info{
+
+        padding:18px;
+
+    }
+
+    .skin-info h3{
+
+        font-size:20px;
+
+    }
+
+    .descricao{
+
+        font-size:13px;
+
+        line-height:22px;
+
+    }
+
+    .skin-footer strong{
+
+        font-size:20px;
+
+    }
+
+    .skin-footer button{
+
+        height:44px;
+
+        font-size:14px;
+
+    }
 
 }

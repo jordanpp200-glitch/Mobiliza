@@ -1,31 +1,53 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
 }
 
 html,
 body,
 #root{
     width:100%;
-    height:100%;
-    font-family:"Poppins",sans-serif;
+    min-height:100%;
 }
 
 body{
-    background:#06161f;
+    background:#06161F;
+    overflow-x:hidden;
 }
+
+/* ==========================================================
+   PÁGINA
+========================================================== */
+
 .register-page{
 
     position:relative;
 
-    width:100vw;
+    width:100%;
 
-    height:100vh;
+    min-height:100vh;
 
     overflow:hidden;
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
 }
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
 
 .register-background{
 
@@ -54,24 +76,23 @@ body{
     inset:0;
 
     background:linear-gradient(
-
         90deg,
-
         rgba(3,12,18,.20),
-
         rgba(3,12,18,.45),
-
         rgba(3,12,18,.72)
-
     );
 
 }
+
+/* ==========================================================
+   LOGO
+========================================================== */
 
 .register-brand{
 
     position:absolute;
 
-    top:45px;
+    top:50px;
 
     left:60px;
 
@@ -81,7 +102,7 @@ body{
 
     gap:18px;
 
-    z-index:50;
+    z-index:100;
 
 }
 
@@ -89,29 +110,39 @@ body{
 
     font-size:60px;
 
-    color:#22d6c7;
+    color:#22D6C7;
 
 }
 
 .register-brand h1{
 
-    color:white;
+    color:#FFFFFF;
 
-    font-size:46px;
+    font-size:48px;
 
     font-weight:700;
+
+    margin:0;
 
 }
 
 .register-brand span{
 
-    color:#d6d6d6;
+    display:block;
 
-    letter-spacing:2px;
+    color:#D6D6D6;
+
+    font-size:14px;
+
+    letter-spacing:3px;
 
     text-transform:uppercase;
 
 }
+
+/* ==========================================================
+   CARD
+========================================================== */
 
 .register-card{
 
@@ -123,7 +154,9 @@ body{
 
     transform:translateY(-50%);
 
-    width:600px;
+    width:100%;
+
+    max-width:600px;
 
     max-height:90vh;
 
@@ -133,45 +166,55 @@ body{
 
     border-radius:30px;
 
-    background:rgba(8,24,35,.68);
+    background:rgba(8,24,35,.72);
 
-    backdrop-filter:blur(28px);
+    -webkit-backdrop-filter:blur(25px);
 
-    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(25px);
 
-    box-shadow:
+    border:1px solid rgba(255,255,255,.10);
 
-    0 20px 80px rgba(0,0,0,.45);
+    box-shadow:0 20px 80px rgba(0,0,0,.45);
 
-    z-index:100;
+    z-index:200;
+
+    animation:fadeRegister .6s ease;
 
 }
+
 .register-card::-webkit-scrollbar{
 
     width:8px;
 
 }
+
 .register-card::-webkit-scrollbar-thumb{
 
-    background:#21d7c6;
+    background:#21D7C6;
 
     border-radius:20px;
 
 }
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
 .register-title{
 
-    color:white;
+    color:#FFFFFF;
 
     font-size:42px;
 
     font-weight:700;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
 }
+
 .register-subtitle{
 
-    color:#9ea8b3;
+    color:#9EA8B3;
 
     font-size:17px;
 
@@ -181,11 +224,15 @@ body{
 
 }
 
+/* ==========================================================
+   FORMULÁRIO
+========================================================== */
+
 .register-form{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 
     gap:20px;
 
@@ -193,9 +240,10 @@ body{
 
 .full-width{
 
-    grid-column:1/3;
+    grid-column:1 / 3;
 
 }
+
 .register-field{
 
     display:flex;
@@ -208,13 +256,17 @@ body{
 
 .register-field label{
 
-    color:white;
+    color:#FFFFFF;
 
     font-size:14px;
 
     font-weight:600;
 
 }
+
+/* ==========================================================
+   INPUTS
+========================================================== */
 
 .register-input-wrapper{
 
@@ -232,7 +284,7 @@ body{
 
     left:18px;
 
-    color:#20d6c5;
+    color:#20D6C5;
 
     font-size:18px;
 
@@ -248,23 +300,29 @@ body{
 
     padding-right:50px;
 
-    background:#1b2934;
-
-    border:1px solid rgba(255,255,255,.12);
-
     border-radius:16px;
 
-    color:white;
+    border:1px solid rgba(255,255,255,.10);
+
+    background:#1B2934;
+
+    color:#FFFFFF;
 
     font-size:15px;
 
-    transition:.3s;
+    transition:.30s;
 
 }
 
 .register-input-wrapper input::placeholder{
 
-    color:#88939b;
+    color:#88939B;
+
+}
+
+.register-input-wrapper input:hover{
+
+    border-color:#20D6C5;
 
 }
 
@@ -272,13 +330,15 @@ body{
 
     outline:none;
 
-    border-color:#20d6c5;
+    border-color:#20D6C5;
 
-    box-shadow:
-
-    0 0 18px rgba(32,214,197,.25);
+    box-shadow:0 0 18px rgba(32,214,197,.25);
 
 }
+
+/* ==========================================================
+   BOTÃO SENHA
+========================================================== */
 
 .password-button{
 
@@ -286,33 +346,47 @@ body{
 
     right:18px;
 
-    background:none;
-
     border:none;
 
-    color:#9aa4ae;
+    background:none;
+
+    color:#9AA4AE;
 
     cursor:pointer;
 
     font-size:18px;
 
+    transition:.30s;
+
 }
+
+.password-button:hover{
+
+    color:#20D6C5;
+
+}
+
+/* ==========================================================
+   BOTÃO CADASTRAR
+========================================================== */
 
 .register-button{
 
-    grid-column:1/3;
+    grid-column:1 / 3;
 
     width:100%;
 
     height:60px;
 
+    margin-top:15px;
+
     border:none;
 
     border-radius:16px;
 
-    background:#21d7c6;
+    background:#21D7C6;
 
-    color:#06161f;
+    color:#06161F;
 
     font-size:20px;
 
@@ -320,19 +394,23 @@ body{
 
     cursor:pointer;
 
-    margin-top:15px;
-
-    transition:.3s;
+    transition:.30s;
 
 }
 
 .register-button:hover{
 
-    background:#19c4b5;
+    background:#19C4B5;
 
     transform:translateY(-2px);
 
+    box-shadow:0 15px 30px rgba(33,215,198,.30);
+
 }
+
+/* ==========================================================
+   LOGIN
+========================================================== */
 
 .register-login-text{
 
@@ -340,65 +418,206 @@ body{
 
     text-align:center;
 
-    color:#9ea8b3;
+    color:#9EA8B3;
+
+    font-size:15px;
 
 }
 
 .register-login-link{
 
-    color:#20d6c5;
+    color:#20D6C5;
 
     text-decoration:none;
 
-    margin-left:6px;
-
     font-weight:700;
 
-}
-
-@media(max-width:900px){
-
-.register-card{
-
-    width:95%;
-
-    left:50%;
-
-    right:auto;
-
-    transform:translate(-50%,-50%);
-
-    max-height:90vh;
+    margin-left:6px;
 
 }
 
-.register-form{
+.register-login-link:hover{
 
-    grid-template-columns:1fr;
-
-}
-
-.full-width{
-
-    grid-column:1;
+    color:#FFFFFF;
 
 }
 
-.register-button,
-.google-button{
+/* ==========================================================
+   ANIMAÇÃO
+========================================================== */
 
-    grid-column:1;
+@keyframes fadeRegister{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-50%) translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(-50%) translateX(0);
+
+    }
 
 }
 
-.register-brand{
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
 
-    left:30px;
+@media (max-width:1200px){
 
-    top:30px;
+    .register-card{
+
+        right:30px;
+
+    }
 
 }
 
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .register-brand{
+
+        display:none;
+
+    }
+
+    .register-page{
+
+        padding:20px;
+
+    }
+
+    .register-card{
+
+        position:relative;
+
+        top:auto;
+
+        right:auto;
+
+        left:auto;
+
+        transform:none;
+
+        width:100%;
+
+        max-width:700px;
+
+        margin:auto;
+
+    }
+
 }
 
+/* ==========================================================
+   CELULAR
+========================================================== */
 
+@media (max-width:768px){
+
+    .register-page{
+
+        padding:15px;
+
+    }
+
+    .register-card{
+
+        padding:30px 25px;
+
+        border-radius:24px;
+
+        max-height:none;
+
+    }
+
+    .register-title{
+
+        font-size:34px;
+
+        text-align:center;
+
+    }
+
+    .register-subtitle{
+
+        text-align:center;
+
+        font-size:15px;
+
+    }
+
+    .register-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .full-width{
+
+        grid-column:1;
+
+    }
+
+    .register-button{
+
+        grid-column:1;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .register-card{
+
+        padding:25px 20px;
+
+    }
+
+    .register-title{
+
+        font-size:28px;
+
+    }
+
+    .register-subtitle{
+
+        font-size:14px;
+
+        line-height:24px;
+
+    }
+
+    .register-input-wrapper input{
+
+        height:54px;
+
+        font-size:14px;
+
+    }
+
+    .register-button{
+
+        height:54px;
+
+        font-size:18px;
+
+    }
+
+}

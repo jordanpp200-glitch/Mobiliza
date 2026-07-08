@@ -1,49 +1,350 @@
+/* ==========================================================
+   TRIPS - MOBILIZA
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* ==========================================================
+   PÁGINA
+========================================================== */
+
 .trips-page{
 
-    display:flex;
+    width:100%;
 
     min-height:100vh;
 
-    background:#08141d;
+    display:flex;
+
+    background:#08141D;
 
 }
+
+/* ==========================================================
+   CONTEÚDO
+========================================================== */
 
 .trips-content{
 
     flex:1;
 
+    width:100%;
+
+    overflow-x:hidden;
+
 }
 
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
 .trips-container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
 
     padding:35px;
 
 }
 
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
 .trips-container h1{
 
-    color:white;
+    color:#FFFFFF;
 
-    margin-bottom:15px;
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
 
 }
 
 .trips-container p{
 
-    color:#b9c4cf;
+    color:#9CB4C1;
+
+    font-size:17px;
+
+    line-height:28px;
+
+    margin-bottom:30px;
 
 }
 
+/* ==========================================================
+   CARD VAZIO
+========================================================== */
+
 .empty-card{
 
-    margin-top:30px;
+    display:flex;
 
-    padding:30px;
+    flex-direction:column;
 
-    border-radius:18px;
+    align-items:center;
 
-    background:#122534;
+    justify-content:center;
 
-    color:white;
+    text-align:center;
+
+    gap:18px;
+
+    padding:50px 35px;
+
+    background:#102633;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+    transition:.30s;
+
+}
+
+.empty-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 40px rgba(37,216,197,.15);
+
+}
+
+.empty-card h2{
+
+    color:#FFFFFF;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.empty-card p{
+
+    color:#A8BBC7;
+
+    max-width:600px;
+
+    line-height:28px;
+
+    margin:0;
+
+}
+
+.empty-card svg{
+
+    font-size:70px;
+
+    color:#25D8C5;
+
+}
+
+/* ==========================================================
+   BOTÃO
+========================================================== */
+
+.empty-card button{
+
+    margin-top:15px;
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#25D8C5;
+
+    color:#07141D;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.empty-card button:hover{
+
+    background:#47F3E3;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37,216,197,.30);
+
+}
+
+/* ==========================================================
+   NOTEBOOK
+========================================================== */
+
+@media (max-width:1200px){
+
+    .trips-container{
+
+        padding:30px;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .trips-container{
+
+        padding:25px;
+
+    }
+
+    .trips-container h1{
+
+        font-size:34px;
+
+    }
+
+    .empty-card{
+
+        padding:40px 30px;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width:768px){
+
+    .trips-container{
+
+        padding:20px;
+
+    }
+
+    .trips-container h1{
+
+        font-size:28px;
+
+        text-align:center;
+
+    }
+
+    .trips-container p{
+
+        text-align:center;
+
+        font-size:15px;
+
+    }
+
+    .empty-card{
+
+        padding:35px 25px;
+
+    }
+
+    .empty-card h2{
+
+        font-size:22px;
+
+    }
+
+    .empty-card p{
+
+        font-size:15px;
+
+        line-height:24px;
+
+    }
+
+    .empty-card svg{
+
+        font-size:55px;
+
+    }
+
+    .empty-card button{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width:480px){
+
+    .trips-container{
+
+        padding:15px;
+
+    }
+
+    .trips-container h1{
+
+        font-size:24px;
+
+    }
+
+    .empty-card{
+
+        padding:30px 20px;
+
+        border-radius:18px;
+
+    }
+
+    .empty-card h2{
+
+        font-size:20px;
+
+    }
+
+    .empty-card p{
+
+        font-size:14px;
+
+    }
+
+    .empty-card button{
+
+        height:48px;
+
+        font-size:14px;
+
+    }
 
 }
